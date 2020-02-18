@@ -1,0 +1,668 @@
+/*
+.alison-1 "#d3e7fd" home page light blue block
+*/
+p, ul {
+ font-size: 16px;
+}
+
+/*****************/
+/* About Predict */
+/*****************/
+.remove-last-li:last-child {
+    list-style: none;
+}
+
+
+/*****************/
+/* Previous */
+/*****************/
+.print-bigger {
+ font-size: 16px;
+}
+
+.print-smaller p, .print-smaller ul, .print-smaller {
+ font-size: 12px;
+}
+
+.panel-heading h3 {
+   color: #ffff !important;
+}
+
+h1,h2,h3 {
+   color: #257ce1;
+}
+
+h1.alison-blue-2 {
+   color: #002e5d !important;
+}
+
+/* for in-page menu links */
+button.btn-link:focus {
+   outline:none;
+}
+
+.alert-danger * {
+   color: #9E3276 !important;
+}
+
+.emphasise {
+ border-left: 4px solid #B63D97;
+ display: inline-block;
+ padding: 20px;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #257ce1;
+  border: none;
+}
+
+.btn-info:hover, .btn-info:focus {
+  color: #fff;
+  background-color: #002e5d;
+  border: none;
+}
+
+.panel-body {
+  padding-bottom: 10px;
+}
+
+/*
+.form-group.has-error {
+  padding: 3px 0;
+  border: 2px solid pink !important;
+}
+.form-group {
+  padding: 3px 0;
+  border: 2px solid white !important;
+}
+*/
+
+.form-group.has-error > :nth-child(3)  {
+  border: 3px solid pink !important;
+  border-radius: 5px !important;
+  padding: 2px !important
+  }
+
+.form-group > :nth-child(3) {
+ border: 3px solid white !important;
+  border-radius: 5px !important;
+  padding: 2px !important;
+  }
+
+.btn-sm, .btn-group-sm > .btn {
+  min-width: 30px;
+  padding: 5px 6px;
+}
+
+/* fix numeric-input look in error state */
+/*
+.form-group.has-error .btn-group.bootstrap-select, .form-group.has-warning .btn-group.bootstrap-select {
+  border: none;
+  }
+*/
+
+
+
+form .form-group {
+  margin: 5px -10px !important;
+}
+
+.has-error  .form-control  {
+  border: 3px solid rgba(0,0,0,0) !important;
+}
+
+.form-control.numeric  {
+  /*border: 3px solid black !important;*/
+}
+
+.has-error .bootstrap-select .dropdown-toggle  {
+  border: 3px solid rgba(0,0,0,0) !important;
+}
+
+
+/* Navbar header */
+@media (max-width: 767px) {
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+  padding-right: 15px;
+}
+}
+
+nav.navbar-fixed-top .container {
+  padding-left: 30px;
+}
+
+.navbar-header {
+   //margin-top: 2rem;
+   font-size: 1.5em;
+}
+
+/* navbar background */
+.navbar-inverse {
+    background-color: #002e5d;
+    border-color: #002e5d;
+    border-radius: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* active button background */
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #2571d6;
+    font-size: 14px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    background-color: #002e5d;
+}
+
+ul.dropdown-menu {
+    padding: 0;
+    width: 200px;
+}
+
+ul.dropdown-menu li a {
+    border-top: 0;
+    color: #fff;
+    background-color:  #002e5d;
+}
+
+ul.dropdown-menu li.active a {
+    color: #fff;
+    background-color: #257ce1;
+    background-color:  #002e5d;
+    font-size: 14px;
+}
+
+ul.dropdown-menu li.active a:focus {
+    color: #fff;
+    background-color: #257ce1;
+    font-size: 14px;
+}
+
+ul.dropdown-menu li.active a:hover {
+    color: #fff;
+    color: #000;
+    background-color: #257ce1;
+    background-color:  white;
+    font-size: 14px;
+}
+
+/* hamburger background */
+.navbar-inverse .navbar-toggle {
+    background-color: #257ce1;
+    border-color: #04396d;
+}
+
+/* unselected menu item text */
+.navbar-inverse .navbar-nav>li>a {
+    color: #cce6ff;
+    font-size: 14px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
+        background-color: #257ce1;
+
+            }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #fff;
+    }
+    .nav.navbar.navbar-inverse {
+        border-radius: 0;
+    }
+        .navbar-inverse .navbar-nav li>a {
+            padding-left: 40px !important;
+        }
+}
+
+@media (min-width: 767px) {
+    .dropdown:hover {
+        background-color: #257ce1;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+     }
+ }
+
+
+.dropdown-menu > li > a {
+    padding: 8px 20px;
+}
+.navbar {
+   margin-bottom: 0;
+}
+
+/*
+.treatments-header {
+  background-color: rgba(255,140,0,0.7) !important;
+  color: white !important;
+  }
+*/
+
+/**
+* Buttons
+*/
+.btn-primary {
+ background-color: #2571d6 ;
+}
+
+.btn-primary:hover {
+ background-color: #002e5d ;
+}
+
+.btn-danger {
+ background-color: #B63D97 !important;
+ border-color: #B63D97 !important;
+}
+.btn-danger:hover {
+  background-color: #993278 !important;
+  border-color: #993278 !important;
+ }
+
+.btn-danger:focus {
+ background-color: #B63D97 !important;
+}
+
+.btn-danger:active {
+ background-color: #B63D97 !important;
+}
+
+/*
+ * Active buttons which are visible in print
+ */
+ .btn-default, .open>.dropdown-toggle.btn-default {
+   color: #333;
+   background-color: #fff;
+   border-color: #dddddd;
+   border-width: 2px;
+ }
+
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #cceef8;
+  border-color: #aaccff;
+  border-width: 2px;
+}
+
+.btn-default.hover.focus, .btn-default:hover:focus, .open>.dropdown-toggle.btn-default {
+  color: blue;
+  background-color: #cceef8;
+  border-color: #adadad;
+  border-width: 2px;
+}
+
+.btn-default.hover, .btn-default:hover, .open>.dropdown-toggle.btn-default {
+  color: #333;
+  background-color: #def;
+  border-color: #adadad;
+  border-width: 2px;
+}
+
+.btn-default.focus.custom, .btn-default.custom:focus, .open>.dropdown-toggle.btn-default {
+  color: #555;
+  background-color: #def;
+  border-color: #adadad;
+  border-width: 2px;
+}
+
+
+.alert-danger {
+  color: #993278;
+  background-color: #ffdbf1;
+  border-color: #ebccd1;
+}
+
+/**
+ * Action panel
+ **/
+.bs-callout-danger {
+    border-left-color: #ce4844;
+}
+
+.bs-callout {
+    padding: 30px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+/**
+ * Tool accordion
+ */
+#data-input > div > .panel-default > .panel-heading {
+  background-color: #B63D97 !important;
+  color: #ffffff !important;
+}
+
+/**
+ * Results
+ **/
+.results .panel-body {
+ /* reset to allow graphics to fill space */
+ margin: 0;
+ padding: 0;
+}
+
+.results .results-in-text{
+  padding: 5px 15px 15px 15px;
+}
+
+.results .results-in-text h3 {
+  padding: 0px;
+  margin-top: 10px;
+  font-size: 1em;
+  }
+.results .results-in-text p {
+  font-size: 1em;
+  }
+
+/*
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+  color: #333;
+  ;background-color: #d6eeff;
+  ;  background-color: #ffccee;
+  border-color: #adadad;
+}
+
+.btn.active, .btn:active {
+  background-image: none;
+  background-color: #ffccee;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,0.25) !important;
+  box-shadow: inset 0 3px 5px rgba(0,0,0,0.25) !important;
+}
+
+.btn.active:hover, .btn:hover{
+  background-image: none;
+  background-color: #d6eeff;
+  outline: 0;
+  }
+
+.btn.active:focus, .btn:focus {
+  background-image: none;
+  background-color: #cceeff;
+    background-color: #ffccee;
+  outline: 0;
+  }
+*/
+
+/**
+ * tabs
+ */
+ .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+   color: #fff;
+   background-color: #B63D97;
+ }
+/*
+.nav-tabs {
+  border-bottom: 2px solid #ccc;
+  font-size: 16px;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  color: #555;
+  cursor: default;
+  background-color:;
+  border: 2px solid #ccc;
+  border-bottom-color: transparent;
+}
+*/
+
+
+/**
+ * footer
+ */
+.copy-footer-container {
+    background-color: #292929;
+    color: #9e9e9e;
+}
+
+.copy-footer {
+    padding-top: 10px;
+    background: #292929;
+    color: #9e9e9e;
+    text-align: center;
+}
+
+.copy-footer a {
+    color: #9e9e9e;
+}
+
+.build-version {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/**
+ * used in Publications
+ */
+ol li {
+ margin-bottom: 10px;
+ font-size: 14px;
+}
+
+.answer {
+  font-size: 18px;
+  color: #888;
+}
+
+.edit {
+  color: red;
+}
+
+.modal-dialog {
+  margin-top: 45px;
+}
+
+
+/**
+ * Results media filters
+ */
+@media print {
+  *,p {
+   font-size: 12px;
+  }
+  table {
+    page-break-inside: avoid;
+  }
+  .screen-only {
+    display: none
+  }
+  #results, #side-effect-warning {
+    page-break-before: always;
+  }
+
+  /* following are variously recommended overrides to bootstrap properties to make break-inside work
+     I found float none to be sufficient however */
+  div {
+    float: none !important;
+  }
+
+  #_hj_poll_container {
+    display: none;
+  }
+}
+
+@media screen {
+  .print-only {
+    display: none
+  }
+}
+
+#fallback {
+    display: none;
+}
+
+#fallback .well {
+    background: #e9f4ff;
+    border: 1px solid #bbdcfb;
+    text-align: center;
+    width: 650px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+#fallback img {
+    width: 200px;
+}
+
+#fallback h1 {
+    color:#b4088d;
+    padding-bottom: 20px;
+}
+
+#fallback p {
+    color: gray;
+}
+
+#fallback .browser-container {
+    display:inline-block;
+    padding:20px;
+}
+
+#fallback .browser-container a {
+    text-align: center;
+}
+
+#fallback .browser-container img {
+    width: 100px;
+}
+
+/* skip to main content */
+.skip a
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+
+.skip a:focus, .skip a:hover
+{
+position:static;
+width:auto;
+height:auto;
+}
+
+
+/**********/
+/* LOADER */
+/**********/
+
+.loader-overlay {
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 999;
+
+    /*width: 50%;*/
+    /*position: fixed;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    /*margin-left: -37.5%;*/
+}
+
+.loader{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* LOADER 1 */
+
+#loader-1:before, #loader-1:after{
+    content: "";
+    position: absolute;
+    /*top: -10px;*/
+    /*left: -10px;*/
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 10px solid transparent;
+    border-top-color: #3498db;
+}
+
+#loader-1:before{
+    z-index: 100;
+    -webkit-animation: spin 1s infinite;
+    animation: spin 1s infinite;
+}
+
+#loader-1:after{
+    border: 10px solid #ccc;
+}
+
+@keyframes spin{
+    0%{
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100%{
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin{
+    0%{
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100%{
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.loader-text {
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.1);
+    /*background-color: rgba(37,113,214, 0.7);*/
+    color: #585754;
+    padding: 8px;
+    border-radius: 12px;
+    margin-top: 12px;
+}
+
+.loader-text-compatibility {
+    font-size: 54px;
+    background-color: rgba(0, 0, 0, 0.1);
+    /*background-color: rgba(37,113,214, 0.7);*/
+    /*color: #585754;*/
+    color: rgba(48, 48, 48, 0.98);
+    padding: 50px;
+    border-radius: 12px;
+    margin-top: 12px;
+}

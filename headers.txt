@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Server: nginx/1.14.0 (Ubuntu)
+Date: Tue, 17 Sep 2019 14:42:12 GMT
+Content-Type: application/json
+Content-Length: 93
+Connection: keep-alive
+X-Xss-Protection: 1; mode=block
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+

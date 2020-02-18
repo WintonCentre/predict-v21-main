@@ -1,0 +1,33 @@
+{
+  "name": "predict-min",
+  "version": "2.2.1",
+  "description": "Predict breast",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "bin/kaocha :unit-cljs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WintonCentre/predict3.git"
+  },
+  "keywords": [
+    "predict",
+    "survival",
+    "breast",
+    "cancer"
+  ],
+  "author": "gmp26",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WintonCentre/predict3/issues"
+  },
+  "homepage": "https://github.com/WintonCentre/predict3#readme",
+  "dependencies": {
+    "isomorphic-ws": "^4.0.1",
+    "ws": "^7.1.2"
+  }
+}

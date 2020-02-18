@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Predict Breast</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Breast cancer survival prediction tool"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+
+    <!-- for mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+
+    <!-- apple device icons -->
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+    <link rel="apple-touch-icon" href="/assets/touch-icon-iphone.png">
+    <link rel="touch-icon-iphone" sizes="152x152" href="/assets/touch-icon-ipad.png">
+    <link rel="touch-icon-iphone" sizes="180x180" href="/assets/touch-icon-iphone-retina.png">
+    <link rel="touch-icon-iphone" sizes="167x167" href="/assets/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="/assets/launch.png">
+
+
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>-->
+<!--    <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>-->
+    <link rel="stylesheet" href="/css/font-awesome.min.css"/>
+
+    <!-- Bootstrap-react compatible: Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Bootstrap 3 select CSS -->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.css">-->
+    <link rel="stylesheet" href="/css/bootstrap-select.css"/>
+
+<!--    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
+    <link rel="stylesheet" href="/css/ionicons.min.css"/>
+
+    <!-- Site specific CSS -->
+    <link rel="stylesheet" href="/css/tooling_styles.css">
+    <link rel="stylesheet" href="/css/gdpr.css">
+
+    <!--[if lte IE 9]>
+        <script type="text/javascript">
+            window.oldBrowser = true;
+        </script>
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <style type="text/css">
+        #fallback {
+            display: block!important;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(213,233,253,0.8);
+        }
+        body {
+            position: relative;
+        }
+    </style>
+    <![endif]-->
+
+    <!-- Bootstrap-react compatible: Optional theme - adds shading to buttons -->
+    <!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
+    -->
+
+    <!-- mediatypechecker -->
+    <script src="/js/mediatypechecker.js" async></script>
+
+    <!-- polyfills for non-ES5 capable browsers -->
+    <!--[if lte IE 9]>
+    <script>
+    (function(){
+      var ef = function(){};
+      window.console = window.console || {log:ef,warn:ef,error:ef,dir:ef};
+    }());
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5-history-api/4.2.7/history.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-shim.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/3.4.0/es5-sham.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/1.2.20171210/classList.min.js"></script>
+    <![endif]-->
+
+    <script>
+        /*! modernizr 3.6.0 (Custom Build) | MIT *
+        * https://modernizr.com/download/?-cssanimations-setclasses !*/
+        !function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,s,i,a;for(var l in S)if(S.hasOwnProperty(l)){if(e=[],n=S[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],a=i.split("."),1===a.length?Modernizr[a[0]]=o:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=o),C.push((o?"":"no-")+a.join("-"))}}function s(e){var n=_.className,t=Modernizr._config.classPrefix||"";if(x&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),x?_.className.baseVal=n:_.className=n)}function i(e,n){return!!~(""+e).indexOf(n)}function a(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):x?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function l(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function u(e,n){return function(){return e.apply(n,arguments)}}function f(e,n,t){var o;for(var s in e)if(e[s]in n)return t===!1?e[s]:(o=n[e[s]],r(o,"function")?u(o,t||n):o);return!1}function c(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function d(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var s=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(s){var i=s.error?"error":"log";s[i].call(s,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function p(){var e=n.body;return e||(e=a(x?"svg":"body"),e.fake=!0),e}function m(e,t,r,o){var s,i,l,u,f="modernizr",c=a("div"),d=p();if(parseInt(r,10))for(;r--;)l=a("div"),l.id=o?o[r]:f+(r+1),c.appendChild(l);return s=a("style"),s.type="text/css",s.id="s"+f,(d.fake?d:c).appendChild(s),d.appendChild(c),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),c.id=f,d.fake&&(d.style.background="",d.style.overflow="hidden",u=_.style.overflow,_.style.overflow="hidden",_.appendChild(d)),i=t(c,e),d.fake?(d.parentNode.removeChild(d),_.style.overflow=u,_.offsetHeight):c.parentNode.removeChild(c),!!i}function y(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(c(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];o--;)s.push("("+c(n[o])+":"+r+")");return s=s.join(" or "),m("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==d(e,null,"position")})}return t}function v(e,n,o,s){function u(){c&&(delete N.style,delete N.modElem)}if(s=r(s,"undefined")?!1:s,!r(o,"undefined")){var f=y(e,o);if(!r(f,"undefined"))return f}for(var c,d,p,m,v,g=["modernizr","tspan","samp"];!N.style&&g.length;)c=!0,N.modElem=a(g.shift()),N.style=N.modElem.style;for(p=e.length,d=0;p>d;d++)if(m=e[d],v=N.style[m],i(m,"-")&&(m=l(m)),N.style[m]!==t){if(s||r(o,"undefined"))return u(),"pfx"==n?m:!0;try{N.style[m]=o}catch(h){}if(N.style[m]!=v)return u(),"pfx"==n?m:!0}return u(),!1}function g(e,n,t,o,s){var i=e.charAt(0).toUpperCase()+e.slice(1),a=(e+" "+P.join(i+" ")+i).split(" ");return r(n,"string")||r(n,"undefined")?v(a,n,o,s):(a=(e+" "+z.join(i+" ")+i).split(" "),f(a,n,t))}function h(e,n,r){return g(e,t,t,n,r)}var C=[],S=[],w={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){S.push({name:e,fn:n,options:t})},addAsyncTest:function(e){S.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=w,Modernizr=new Modernizr;var _=n.documentElement,x="svg"===_.nodeName.toLowerCase(),b="Moz O ms Webkit",P=w._config.usePrefixes?b.split(" "):[];w._cssomPrefixes=P;var z=w._config.usePrefixes?b.toLowerCase().split(" "):[];w._domPrefixes=z;var E={elem:a("modernizr")};Modernizr._q.push(function(){delete E.elem});var N={style:E.elem.style};Modernizr._q.unshift(function(){delete N.style}),w.testAllProps=g,w.testAllProps=h,Modernizr.addTest("cssanimations",h("animationName","a",!0)),o(),s(C),delete w.addTest,delete w.addAsyncTest;for(var T=0;T<Modernizr._q.length;T++)Modernizr._q[T]();e.Modernizr=Modernizr}(window,document);
+    </script>
+
+    <script>
+        if (typeof Object.assign != 'function') {
+  // Must be writable: true, enumerable: false, configurable: true
+  Object.defineProperty(Object, "assign", {
+    value: function assign(target, varArgs) { // .length of function is 2
+      'use strict';
+      if (target == null) { // TypeError if undefined or null
+        throw new TypeError('Cannot convert undefined or null to object');
+      }
+
+      var to = Object(target);
+
+      for (var index = 1; index < arguments.length; index++) {
+        var nextSource = arguments[index];
+
+        if (nextSource != null) { // Skip over if undefined or null
+          for (var nextKey in nextSource) {
+            // Avoid bugs when hasOwnProperty is shadowed
+            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+              to[nextKey] = nextSource[nextKey];
+            }
+          }
+        }
+      }
+      return to;
+    },
+    writable: true,
+    configurable: true
+  });
+}
+/* enable console.log in older browsers */
+
+        if (Function.prototype.bind && window.console && typeof console.log == "object"){
+            [
+                "log","info","warn","error","assert","dir","clear","profile","profileEnd"
+            ].forEach(function (method) {
+                console[method] = this.bind(console[method], console);
+            }, Function.prototype.call);
+        }
+    </script>
+
+    <script>
+        // Avoid `console` errors in browsers that lack a console.
+        // In IE9 unless developer console is open javascript won't run if there is console.log (or other console)
+        var method;
+        var noop = function () {};
+        var methods = [
+            'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+            'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+            'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+            'timeStamp', 'trace', 'warn'
+        ];
+        var length = methods.length;
+        var console = (window.console = window.console || {});
+
+        while (length--) {
+            method = methods[length];
+
+            // Only stub undefined methods.
+            if (!console[method]) {
+                console[method] = noop;
+            }
+        }
+    </script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<!--    <script-->
+<!--            src="https://code.jquery.com/jquery-3.3.1.min.js"-->
+<!--            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="-->
+<!--            crossorigin="anonymous"></script>-->
+    <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>-->
+<!--    bootstrap 3.4.1-->
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- SmartMenus jQuery Bootstrap Addon CSS -->
+    <link href="/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+
+    <!-- SmartMenus jQuery plugin -->
+    <script type="text/javascript" src="/js/jquery.smartmenus.min.js"></script>
+
+    <!-- SmartMenus jQuery Bootstrap Addon -->
+    <script type="text/javascript" src="/js/jquery.smartmenus.bootstrap.min.js"></script>
+
+
+<!-- Delete tracking later. Replaced with wrapper-->
+<!--    <script>-->
+<!--       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;-->
+<!--       ga('create', "UA-1462795-22", 'auto');-->
+
+<!--       // Replace the following lines with the plugins you want to use.-->
+<!--       ga('require', 'urlChangeTracker');-->
+
+<!--       // ga('require', 'eventTracker');-->
+<!--       ga('require', 'eventTracker', {-->
+<!--           attributePrefix: 'data-'-->
+<!--       });-->
+
+<!--       ga('send', 'pageview');-->
+
+<!--       // For GDPR-->
+<!--       ga('set', 'anonymizeIp', true);-->
+<!--    </script>-->
+<!--    <script async src="https://www.google-analytics.com/analytics.js"></script>-->
+<!--    <script async src="/js/autotrack.js"></script>-->
+
+    <script src="/js/compiled/predict3.js" type="text/javascript"></script>
+    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body style="overflow-x:hidden">
+<!--<div id="app">This will be replaced when the site loads.</div>-->
+
+<!-- pre-rendered home page -->
+<div id="app">
+    <div class="loader-overlay">
+        <div class="loader" id="loader-1"></div>
+        <div class="loader-text" id="id-loader-text">Loading...</div>
+    </div>
+
+    <div data-reactroot=""><div class="container-fluid"><div class="row"><div class="col-sm-10 col-sm-offset-1 col-xs-12"><img src="/assets/NHS.jpg" alt="NHS logo" class="img-responsive pull-right" style="width: 85px; margin-top: 30px; margin-bottom: 38px;"><img src="/assets/logo-pos-al.png" alt="Predict breast cancer logo" class="img-responsive" style="width: 180px; margin-top: 13px; margin-bottom: 6px;"></div><div class="col-xs-12"><div class="row screen-only"><div class="col-sm-11 col-xs-12 skip"><a tabindex="-1" class="pull-right" style="cursor: pointer;">Skip to main content</a></div></div><nav><nav class="navbar navbar-inverse"><div class="container"><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#navbar" aria-label="menu" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div id="navbar" class="collapse navbar-collapse"><ul class="nav navbar-nav" data-smartmenus-id="15819405170517021"><li tabindex="0" class="active" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>Home</span></a></li><li tabindex="0" class="dropdown" style="cursor: pointer;"><a class="dropdown-toggle has-submenu" id="sm-15819405170517021-1" aria-haspopup="true" aria-controls="sm-15819405170517021-2" aria-expanded="false"><span>About Predict</span><span class="caret"></span></a><ul class="dropdown-menu" id="sm-15819405170517021-2" role="group" aria-hidden="true" aria-labelledby="sm-15819405170517021-1" aria-expanded="false"><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>Overview</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>– Who is it for?</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>– How Predict works</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>– Who built Predict?</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>Technical</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>– Development History</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>– Publications</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>FAQs</span></a></li></ul></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>Predict Tool</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>Contact</span></a></li><li tabindex="0" class="dropdown" style="cursor: pointer;"><a class="dropdown-toggle has-submenu" id="sm-15819405170517021-3" aria-haspopup="true" aria-controls="sm-15819405170517021-4" aria-expanded="false"><span>Legal</span><span class="caret"></span></a><ul class="dropdown-menu" id="sm-15819405170517021-4" role="group" aria-hidden="true" aria-labelledby="sm-15819405170517021-3" aria-expanded="false"><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>Disclaimer</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>Algorithm</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>Privacy &amp; Data Protection</span></a></li></ul></li><li tabindex="0" class="dropdown" style="cursor: pointer;"><a class="dropdown-toggle has-submenu" id="sm-15819405170517021-5" aria-haspopup="true" aria-controls="sm-15819405170517021-6" aria-expanded="false"><span>Change Language </span><span class="caret"></span></a><ul class="dropdown-menu" id="sm-15819405170517021-6" role="group" aria-hidden="true" aria-labelledby="sm-15819405170517021-5" aria-expanded="false"><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>Spanish</span></a></li><li tabindex="0" style="cursor: pointer;"><a data-toggle="collapse" data-target=".navbar-collapse.in"><span>English</span></a></li></ul></li></ul></div></div></nav></nav></div></div><div id="main-content" tabindex="-1" class="row" style="margin-left: -30px; margin-right: -30px;"><div class="col-xs-12"><div style="position: relative; width: 100%; background-color: rgb(211, 231, 253);"><div style="position: absolute; width: 100%; top: 0px; bottom: 20%; opacity: 0.25; background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));"></div><div class="row"><div class="col-sm-5 col-sm-offset-1"><h1 class="alison-blue-2" style="margin: 30px 15px 15px;"><span>What is Predict?</span></h1><div><p style="font-size: 20px; margin-left: 15px;"><span>Predict is an online tool that helps patients and clinicians see how different treatments
+     for early invasive breast cancer might improve survival rates after surgery.</span></p><p style="font-size: 14px; margin-left: 15px;"><span>It is endorsed by the American Joint Committee on Cancer (AJCC).</span></p></div><div><button aria-label="go to predict tool" type="button" class="btn btn-primary btn-lg" style="margin: 20px;"><i aria-hidden="true" class="fa fa-chevron-right"></i><span> Start Predict</span></button></div><p style="margin-left: 15px;"><i><span>Did you mean to visit </span></i><a href="https://prostate.predict.nhs.uk">Predict Prostate</a><span>?</span></p></div><div class="col-sm-6"><img src="/assets/icon-imagery.png" alt="banner imagery" aria-hidden="true" class="img-responsive" style="margin-left: 5%; width: 90%;"></div></div></div></div></div><div class="row" style="margin: 0px -30px 15px;"><div class="col-sm-10 col-sm-offset-1"><div class="row"><div class="col-md-4"><div class="text-center" style="display: inline-block; margin-top: 0px; margin-left: 15px; width: 100%;"><div style="height: 70px; margin-top: 20px;"><img src="/assets/graph-icon.png" alt="patient icon" aria-hidden="true" style="margin-top: 20px; margin-left: 15px;"></div><h3><span>What does Predict do?</span></h3><div><p><span>Predict asks for some details about the patient and the cancer. It then uses data about the survival
+    of similar women in the past to show the likely proportion of such women expected to survive up to fifteen years
+    after their surgery with different treatment combinations.</span></p></div></div></div><div class="col-md-4"><div class="text-center" style="display: inline-block; margin-top: 0px; margin-left: 15px; width: 100%;"><div style="height: 70px; margin-top: 20px;"><img src="/assets/patient-icon.png" alt="graph icon" aria-hidden="true" style="margin-top: 20px; margin-left: 15px;"></div><h3><span>Who is Predict for?</span></h3><div><p><span>Predict is for clinicians, patients and their families.</span></p><p><strong><span>Patients should use it in consultation with a medical professional.</span></strong></p></div></div></div><div class="col-md-4"><div class="text-center"><div class="text-center" style="display: inline-block; margin-top: 0px; margin-left: 15px; width: 100%;"><div style="height: 70px; margin-top: 20px;"><img src="/assets/book-icon.png" alt="book icon" aria-hidden="true" style="margin-top: 20px; margin-left: 15px;"></div><h3><span>Where can I find out more?</span></h3><div><p><span>To read more go to </span><a role="button"><strong><span>About Predict</span></strong></a></p></div></div><div class="visible-sm-block"><div><button aria-label="go to predict tool" type="button" class="btn btn-primary btn-lg" style="margin: 20px;"><i aria-hidden="true" class="fa fa-chevron-right"></i><span> Start Predict</span></button></div></div></div></div></div></div></div><div id="editorModal" role="dialog" tabindex="-1" aria-hidden="true" class="modal fade"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button " aria-hidden="true" class="close">×</button><h4 class="modal-title"></h4></div><div class="modal-body"><h5>English text</h5><hr><h5>Last translation</h5><hr><h5>New translation</h5><textarea style="width: 100%; height: 100%;"></textarea></div><div class="modal-footer"><button type="button" class="btn btn-default">Close</button></div></div></div></div><div style="margin-top: 20px;"><div class="row print-only"><div class="col-xs-12"><img src="/assets/print-footer.png"></div></div><div class="row screen-only" style="clear: both; color: white;"><div class="col-sm-12" style="min-height: 200px; background-color: rgb(0, 46, 93); border-radius: 0px; margin-left: 0px; margin-right: 0px; padding: 60px; z-index: 1;"><div class="row"><div class="col-sm-4"><img src="/assets/white-logo.png" alt="Predict breast cancer logo" class="img-responsive screen-only" style="margin-top: 10px; margin-left: auto; margin-right: auto; max-width: 175px;"><img src="/assets/logo-pos-al.png" alt="Predict breast cancer logo" class="img-responsive print-only" style="margin-bottom: 3ex; max-width: 200px;"></div><div class="col-sm-4"><a href="https://wintoncentre.maths.cam.ac.uk" class="screen-only"><img src="/assets/ucs-winton-transparent.png" alt="Winton Centre logo" class="img-responsive" style="margin-top: 10px; margin-left: auto; margin-right: auto; max-width: 175px;"></a><img src="/assets/ucs-winton-blue.png" alt="Winton Centre logo" class="img-responsive print-only" style="margin-bottom: 3ex; max-width: 200px;"></div><div class="col-sm-4"><img src="/assets/phe-neg.png" alt="Public Health England logo" class="img-responsive screen-only" style="margin-top: 10px; margin-left: auto; margin-right: auto; max-width: 120px;"><img src="/assets/phe-pos.png" alt="Public Health England logo" class="img-responsive print-only" style="margin-bottom: 4ex; max-width: 200px;"></div></div></div><div class="row copy-footer-container"><div class="col-lg-9 col-md-6 col-md-offset-3 col-lg-offset-1 copy-footer"><!-- react-text: 184 -->Copyright Ⓒ 2020 University of Cambridge. All Rights Reserved | <!-- /react-text --><a href="javascript:void(0)">Privacy &amp; Data Protection</a><!-- react-text: 186 --> | <!-- /react-text --><a href="javascript:void(0)">Disclaimer</a></div><div class="col-lg-2 col-md-3 build-version">Build: v0.0-dev-#000-hash</div></div></div></div></div></div>
+
+    <!-- Loader custom config for browsers without CSS animations -->
+    <script>
+        if (Modernizr.cssanimations) {
+            // supported
+        } else {
+            $("#loader-1").remove();
+            $("#id-loader-text").toggleClass('loader-text loader-text-compatibility');
+            $("#id-loader-text").addClass('loader-overlay');
+        }
+    </script>
+
+</div>
+
+<!-- Tracker and GDPR -->
+<script type="text/javascript" src="/js/gdpr.js"></script>
+
+<div class="gdpr-container container" id="gdprContainer">
+<!--    <form onsubmit="gdprBtnOnClick(event)">-->
+<!--        <div class="row">-->
+<!--            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 vcenter gdpr-style">May we use cookies to improve our website?-->
+<!--                For more information, visit our-->
+<!--                <a href="https://breast.predict.nhs.uk/legal/privacy" class="gdpr-style">Privacy Policy.</a>-->
+<!--            </div>&lt;!&ndash;-->
+<!--            &ndash;&gt;<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 vcenter col-centered text-right ">-->
+<!--                <input type="submit"-->
+<!--                       style="margin-left: 5px;"-->
+<!--                       class="btn btn-default btn-sm gdpr-style"-->
+<!--                       id="submit-btn-not-allow"-->
+<!--                       onclick="btnNotAllowOnClick()"-->
+<!--                       value="Don't Allow">-->
+<!--                <input type="submit"-->
+<!--                       style="margin-left: 5px;"-->
+<!--                       class="btn btn-primary btn-sm gdpr-style"-->
+<!--                       value="Allow"-->
+<!--                       id="submit-btn-allow"-->
+<!--                       onclick="btnAllowOnClick()">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </form>-->
+</div>
+
+<!--GDPR Initial State-->
+<script>
+    insertGDPRHtml();
+    initialiseGDPRState();
+</script>
+
+<div id="fallback">
+    <div class="well">
+        <img src="/assets/logo-pos-al.png">
+        <h1>Improve your experience</h1>
+        <p>You're using a web browser that we don't support.</p>
+        <p>Try one of the these options to have a better experience on Predict 2.1.</p>
+        <p>You can also use the previous <a href="/">Predict version by clicking here</a>.</p>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="browser-container">
+                    <a target="_blank" href="https://www.google.com/chrome/" rel="noopener">
+                        <img src="/assets/browser-chrome.png">
+                        <div>Chrome</div>
+                    </a>
+                </div>
+                <div class="browser-container">
+                    <a target="_blank" href="https://www.mozilla.org/en-GB/firefox/new/" rel="noopener">
+                        <img src="/assets/browser-firefox.png">
+                        <div>Chrome</div>
+                    </a>
+                </div>
+                <div class="browser-container">
+                    <a target="_blank" href="https://support.microsoft.com/en-gb/help/17621/internet-explorer-downloads" rel="noopener">
+                        <img src="/assets/browser-ie.png">
+                        <div>IE (v10+)</div>
+                    </a>
+                </div>
+                <div class="browser-container">
+                    <a target="_blank" href="https://www.microsoft.com/en-gb/windows/microsoft-edge" rel="noopener">
+                        <img src="/assets/browser-edge.png">
+                        <div>Edge</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Delete tracking later. Replaced with wrapper-->
+<!-- Hotjar Tracking Code for http://www.predict.nhs.uk -->
+<!--<script>-->
+<!--    (function(h,o,t,j,a,r){-->
+<!--    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};-->
+<!--    h._hjSettings={hjid:879744,hjsv:6};-->
+<!--    a=o.getElementsByTagName('head')[0];-->
+<!--    r=o.createElement('script');r.async=1;-->
+<!--    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;-->
+<!--    a.appendChild(r);-->
+<!--})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');-->
+<!--</script>-->
+
+
+<!-- Service Worker -->
+<script>
+
+
+    if ('serviceWorker' in navigator) {
+       window.addEventListener('load', function() {
+           navigator.serviceWorker.register('/sw_cache_update.js', { scope: '/' })
+               .then(function(registration) {
+                   // console.log("Service Worker Registered", registration);
+               })
+               .catch(function(err) {
+                   console.log("Service Worker Failed to Register", err);
+               });
+       });
+    }
+
+    // Enable this to force unregister for all uses who visit
+    // navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    //     for(let registration of registrations) {
+    //         console.log(registration)
+    //         registration.unregister()
+    //     } })
+
+</script>
+
+</body>
+</html>

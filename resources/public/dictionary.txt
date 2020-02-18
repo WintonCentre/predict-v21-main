@@ -1,0 +1,116 @@
+;
+; A list of commands to be executed on read.
+; [:upsert lang dict] will update or insert words into a language dictionary
+; [:switch lang] will set the active language in the browser
+;
+; Only two-character language codes are currently supported (3 with the keyword colon)
+;
+[[:upsert :en {:en                   "English"
+               :de                   "German"
+               :es                   "Spanish"
+               :it                   "italian"
+               :fr                   "French"
+               :ja                   "Japanese"
+               :nl                   "Dutch"
+               :ar                   "Arabic"
+               :pt                   "Portuguese"
+               ;:missing              "**MISSING** %1 %2"    ; Fallback for missing resources
+               :test/fixture         "English test"
+               :404/oops             "Oops!"
+               :404/text             "Try clicking on 'Home' in the navigation bar instead."
+               :unknown              "Unknown"
+               :home/what-is-predict "What is Predict?"
+               :home/start-button    " Start Predict"
+               }]
+
+ [:upsert :es {:en                   "Inglés"
+               :de                   "Alemán"
+               :es                   "Español"
+               :fr                   "Francesa"
+               :it                   "Italiana"
+               :ja                   "Japonesa"
+               :nl                   "Holandesa"
+               :pt                   "Portuguesa"
+               :test/fixture         "Español prueba"
+               :404/oops             "Ups!"
+               :404/text             "Intenta hacer clic en 'Inicio' en la barra de navegación."
+               :unknown              "Desconocido"
+               :home/what-is-predict "¿Qué es Predict?"
+               }]
+
+ [:upsert :fr {:en                   "Anglais"
+               :de                   "Allemande"
+               :es                   "Espanol"
+               :fr                   "Française"
+               :it                   "Italiene"
+               :ja                   "Japonaise"
+               :nl                   "Néerlandaise"
+               :pt                   "Portugais"
+               :test/fixture         ""
+               :404/oops             "Ups!"
+               :404/text             "Intenta hacer clic en 'Inicio' en la barra de navegación."
+               :unknown              "Inconnu"
+               :home/what-is-predict "Qu'est-ce que Predict?"
+               }]
+
+ [:upsert :it {:en                   "Inglese"
+               :de                   "Tedesca"
+               :es                   "Spagnola"
+               :fr                   "Francese"
+               :it                   "Italiano"
+               :ja                   "Giapponese"
+               :nl                   "Olandese"
+               :test/fixture         "Tedesca"
+               :404/oops             "Ups!"
+               :404/text             "Intenta hacer clic en 'Inicio' en la barra de navegación."
+               :unknown              "Sconosciuto"
+               :home/what-is-predict "Che cos'è Predict?"
+               }]
+
+ [:upsert :ja  {:en                   "英語"
+               :de                   "ドイツ人"
+               :es                   "スペイン語"
+               :fr                   "フランス語"
+               :it                   "イタリアe"
+               :ja                   "日本語"
+               :nl                   "オランダ"
+               :pt                   "ポルトガル語"
+               :test/fixture         "Tedesca"
+               :404/oops             "おっとっと！"
+               :404/text             "代わりに、ナビゲーションバーの[ホーム]をクリックしてください。"
+               :unknown              "わからない"
+               :home/what-is-predict "Predictとは何ですか？"
+               }]
+
+[:upsert :nl  {:en                   "Engels"
+               :de                   "Duitse"
+               :es                   "Spaanse"
+               :fr                   "Franse"
+               :it                   "Italiaanse"
+               :ja                   "Japans"
+               :nl                   "Nederlandse"
+               :pt                   "Portugees"
+               :test/fixture         "Tedesca"
+               :404/oops             "Oops!"
+               :404/text             "Klik in plaats daarvan op 'Home' in de navigatiebalk."
+               :unknown              "onbekend"
+               :home/what-is-predict "Wat is Predict?"
+               }]
+
+[:upsert :pt  {:en                   "Engels"
+               :de                   "Duitse"
+               :es                   "Spaanse"
+               :fr                   "Franse"
+               :it                   "Italiaanse"
+               :ja                   "Japonesa"
+               :nl                   "Nederlandse"
+               :pt                   "Opa!"
+               :test/fixture         "Tedesca"
+               :404/oops             "Ups!"
+               :404/text             "Tente clicar em 'Página inicial' na barra de navegação."
+               :home/what-is-predict "O que é o Predict?"
+               }]
+
+ [:switch :en]
+ ]
+

@@ -1,0 +1,22 @@
+{
+  "short_name": "Breast",
+  "name": "Predict Breast",
+  "description": "Predict Breast",
+  "icons": [
+    {
+      "src": "/assets/logo_breast_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/logo_breast_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
+

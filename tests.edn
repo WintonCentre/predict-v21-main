@@ -1,0 +1,35 @@
+#kaocha/v1
+    {:tests [{:id :unit-clj
+              :test-paths ["test/clj"]}
+             {:id         :integration
+              ;;
+              ;; To run integration tests against chrome you need to install the latest chromedriver
+              ;; from https://chromedriver.chromium.org/downloads. Old ones may fail MacOs malware checks.
+              ;;
+              :test-paths ["test/clj"]}
+             {:id            :unit-cljs
+              :type          :kaocha.type/cljs
+              :source-paths  ["src/cljs" "src_tt_prod/cljs"]
+              :test-paths    ["test/cljs" "test_tt_prod/cljs"]
+              :cljs/timeout  15000                        ; 10 seconds, the default
+              :cljs/repl-env cljs.repl.browser/repl-env
+              }
+             {:id            :prod
+              :type          :kaocha.type/cljs
+              :source-paths  ["src/cljs" "src_tt_prod/cljs"]
+              :test-paths    ["test/cljs" "test_tt_prod/cljs"]
+              :cljs/timeout 15000                        ; 10 seconds, the default
+              :cljs/repl-env cljs.repl.browser/repl-env
+              }
+             {:id            :edit
+              :type          :kaocha.type/cljs
+              :source-paths  ["src/cljs" "src_tt_edit/cljs"]
+              :test-paths    ["test/cljs" "test_tt_edit/cljs"]
+              :cljs/timeout 15000                        ; 10 seconds, the default
+              ;:cljs/repl-env cljs.repl.node/repl-env     ; node is the default
+              :cljs/repl-env cljs.repl.browser/repl-env
+              }]
+     #_#_:plugins [:kaocha.plugin/cloverage]                  ; clj only?
+     }
+
+

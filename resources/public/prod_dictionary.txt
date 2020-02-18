@@ -1,0 +1,30 @@
+;
+; A list of commands to be executed on read.
+; [:upsert lang dict] will update or insert words into a language dictionary
+; [:switch lang] will set the active language in the browser
+;
+; Only two-character language codes are currently supported (3 with the keyword colon)
+;
+[[:upsert :en {:en                   "English"
+                :es                   "Spanish"
+                ;:missing              "**MISSING** %1 %2"    ; Fallback for missing resources
+               :test/fixture         "English test"
+               :404/oops             "Oops!"
+               :404/text             "Try clicking on 'Home' in the navigation bar instead."
+               :unknown              "Unknown"
+               :home/what-is-predict "What is Predict?"
+               :home/start-button    " Start Predict"
+               }]
+
+ [:upsert :es {:en                   "Inglés"
+               :es                   "Español"
+                :test/fixture         "Español prueba"
+               :404/oops             "Ups!"
+               :404/text             "Intenta hacer clic en 'Inicio' en la barra de navegación."
+               :unknown              "Desconocido"
+               :home/what-is-predict "¿Qué es Predict?"
+               }]
+
+ [:switch :en]
+ ]
+

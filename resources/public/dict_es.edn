@@ -1,0 +1,823 @@
+[["upsert"
+  "es"
+  {:about/over-2-5
+   "incluye más detalles sobre cómo se desarrolló y puso a prueba Predict. ",
+   :navbar/disclaimer
+   "Descargo de responsabilidad",
+   :help/micromets
+   "Micrometástasis únicamente",
+   :chart/legend-at "% a  ",
+   :tra/when-her2
+   "Disponible en la quimioterapia cuando el tumor es positivo a la expresión de HER2",
+   :navbar/alg "Algoritmo",
+   :legal/cookie-2
+   "La ley sobre cookies de sitios web cambió el 26 de mayo de 2011 y exige que los sitios indiquen qué cookies se están utilizando y su finalidad. También aclara que las cookies sólo serán utilizadas bajo consentimiento del usuario. Puedes encontrar más información sobre esta ley visitando el ",
+   :about/over-menu-7 "Publicaciones",
+   :mmets/why-not
+   "¿Por qué no puedo ingresar micrometástasis?",
+   :age/valid-range
+   "La edad debe ser entre 25 y 85 años",
+   :info/mmets-4
+   "Si ingresas ‘1' nódulo positivo y “Sí” para “micrometástasis solamente”, esto indica que se encontró que sólo un ganglio linfático contenía células cancerosas y que sólo eran micrometástasis. Predict modelará esto como equivalente a la mitad de un nódulo positivo.",
+   :info/h10-already-warning-3-1
+   " ATLAS trial",
+   :tool/h10-red-alert
+   "Estos resultados sólo son relevantes para alguien que ya ha recibido 5 años de terapia hormonal.",
+   :info/er-status5
+   " del tumor para usar Predict, ya que influye de manera importante en las opciones de tratamiento y los resultados.",
+   :about/tech-menu-2 "Versiones anteriores",
+   :faqs12-q
+   "¿Qué hay de los efectos secundarios?",
+   :texts/h10-out-of-5 " viven por lo menos ",
+   :button/mode-unknown "Desconocido",
+   :info/nodes-1 "El número de",
+   :about/pubs-footnote
+   "* Este trabajo se realizó independientemente del equipo que desarrolló Predict.",
+   :info-tra-2
+   ", también conocido por su nombre comercial Herceptin, es un medicamento que se dirige específicamente a tumores positivos para HER2.",
+   :button/micromets-no "No",
+   :button/her2-status-yes "Positivo",
+   :faqs/sources "Fuentes de asesoría",
+   :faqs2-a1-1-1
+   "Predict estima lo que se esperaría que les sucediera a las mujeres con características similares con base en datos anteriores. Los hallazgos se basan en mujeres tratadas en el este de Inglaterra, pero también hemos probado que dan los mismos resultados en casi 5,500 mujeres tratadas en West Midlands y una gran base de datos de mujeres diagnosticadas menores de 40 años en Nottingham. Hasta donde sabemos, la herramienta Predict funciona igualmente bien para todas las mujeres en el Reino Unido. También hemos probado Predict en más de 3,000 mujeres tratadas en Columbia Británica, Canadá y un gran grupo de mujeres de los Países Bajos. Otros investigadores también han validado Predict utilizando grupos de pacientes de los Países Bajos y Malasia. Se han publicado cinco artículos científicos que describen el trabajo, y han sido revisados ​​por científicos y clínicos (ver Publicaciones para más detalles). En resumen, Predict genera estimaciones basadas en un gran número de mujeres que han recibido tratamiento en el pasado, pero no puede decir qué sucederá realmente con una mujer en particular.",
+   :legal/alg-1
+   "El modelo se basa en una forma matemática llamada 'función de riesgo acumulado’, la cual considera dos aspectos: la probabilidad de morir de cáncer de mama y la probabilidad de morir por otras causas. Por un lado especifica la probabilidad de que una persona muera en cualquier periodo de tiempo después de la cirugía por cáncer de mama, excluyendo otras causas de muerte. Y por el otro, especifica la probabilidad de morir por otras causas, excluyendo las muertes por cáncer de mama. Estos dos procesos -muertes por cáncer de mama y muertes por otras causas- son independientes y juntos comprenden un 'modelo de riesgos competitivos', donde la probabilidad general de estar vivo en un cierto número de años después de la cirugía se da por la probabilidad de que ninguno de estos dos eventos haya ocurrido.",
+   :treatment/horm "Terapia hormonal",
+   :home/dymtv "¿O querías visitar",
+   :legal/disc-1
+   "Predict utiliza un algoritmo basado en información de miles de mujeres diagnosticadas en Inglaterra y de grandes ensayos controlados aleatorizados sobre diferentes opciones de tratamiento. Sin embargo, Predict sólo puede proporcionar su 'mejor estimación’ con base ​​en el conocimiento actual, pero de ninguna manera puede predecir lo que sucederá con una paciente a nivel individual. Las pacientes deben consultar a su especialista, quien podrá analizar los resultados en un contexto más personalizado.",
+   :info/nodes-3
+   " es la cantidad de ganglios linfáticos a los que se ha propagado el cáncer. Algunos de ellos habrán sido retirados durante la cirugía y examinados. Los informes de patología pueden citar un par de números como '2/3', lo que significa que se examinaron 3 ganglios linfáticos y se encontraron células cancerosas en 2 de ellos. En este caso, seleccionarías ‘2’.",
+   :info/age1
+   "Edad al momento del diagnóstico del cáncer. Se puede ingresar una edad entre 25 y 85 años.",
+   :about/hist-3-3
+   "\nEl beneficio de trastuzumab (Herceptin) se basa en la reducción proporcional estimada de 31 por ciento en la tasa de mortalidad de hasta cinco años en estudios publicados.",
+   :faqs14-a2
+   " en casi 5,700 mujeres tratadas por cáncer de mama entre 1999 y 2003. Con esta información pudieron ver cómo los factores individuales, como edad y tratamientos recibidos, afectaron la supervivencia a los cinco y diez años.",
+   :button/post-meno-post "Sí",
+   :info/mmets-1 "La micrometástasis ",
+   :priv/disable-2
+   "herramienta que puede usar",
+   :about/hist-2 "Validación del modelo",
+   :info/h10-already-warning-2
+   "Para ilustrar los beneficios potenciales de 5 años adicionales de terapia hormonal, Predict ha utilizado datos del ",
+   :button/mode-symptomatic "Síntomas",
+   :tools/results-appear
+   "Las opciones de tratamiento y resultados aparecerán aquí una vez que hayas llenado toda la información requerida en la parte superior. ",
+   :results/curves-title-3
+   "con el tiempo después de la cirugía.",
+   :help/dcis "¿DCis o CLis solamente?",
+   :priv/disable-1
+   "Puedes optar por no recibir cookies en cualquier momento, siguiendo las instrucciones de su navegador. Normalmente se encuentran en \"Herramientas\" y \"Opciones\" (PC) o \"Preferencias\" (Mac), aunque los detalles varían de un navegador a otro. Además, Google ofrece una ",
+   :texts/h10-out-of-2 "mujeres",
+   :treatment/delay
+   "¿Ya recibiste 5 años de terapia hormonal?",
+   :tool/not-designed-for-all
+   "Predict no está diseñado para ser utilizado en todos los casos de cáncer.",
+   :button/er-status-no "Negativo",
+   :tool/detected-warn-2 " rutina preventivos",
+   :footer/sttt-1 "¿Alguien con quien hablar?",
+   :chart/add-bene-1
+   "El beneficio adicional de la ",
+   :priv/table-12
+   "Hotjar cookie. Esta cookie se establece una vez que un visitante completa una encuesta utilizando el widget Feedback Poll. Se utiliza para garantizar que la misma encuesta no vuelva a aparecer si ya se ha completado.",
+   :info-title/h5-already
+   "¿Ya recibiste 5 años de terapia hormonal?",
+   :info/size4 "Grado 1 (Bien diferenciado)",
+   :about/over-menu-5
+   "Historia de su desarrollo",
+   :faqs11-a1
+   "Predict está diseñado para ayudar a tomar decisiones sobre el tratamiento después de la cirugía inicial. Actualmente no hay suficientes datos disponibles para poder tener en cuenta los efectos de los diferentes tipos de cirugías en los resultados.",
+   :help/her2-status "Expresión de HER2 ",
+   :contact/email "Correo electrónico: ",
+   :legal/m-5 "tamaño",
+   :info/her2-1 "La expresión de HER 2 ",
+   :chart/legend-yrs "años",
+   :info/h10-already-warning-6
+   "Hasta ahora, los ensayos sobre la extensión de la terapia hormonal con inhibidores de la aromatasa de 5 a 10 años sólo informan cuánto reducen la recurrencia del cáncer de mama, en lugar de su beneficio en la supervivencia. Sus resultados se resumen en un ",
+   :contact/title "Contacto",
+   :priv/table-7 "30 minutos",
+   :info/chemo-2
+   " usa medicamentos para debilitar o matar las células cancerosas en todo el cuerpo. Hay múltiples medicamentos de quimioterapia que funcionan en diferentes tipos de células tumorales, y con frecuencia se administran en combinaciones para maximizar su efectividad. Las opciones en Predict cubren los regímenes genéricos de quimioterapia utilizados con mayor frecuencia en Inglaterra:",
+   :about/over-2 "Cómo funciona Predict",
+   :button/her2-status-unknown "Desconocido",
+   :icons/survivors "sobrevivientes ",
+   :legal/table3-6
+   "Terapia hormonal hasta 10 años (si ER+)",
+   :info/KI67-3
+   "Haz click en ‘Desconocido’ si no tienes esta información disponible. No todos los tumores son evaluados para la expresión de Ki67.",
+   :curve/legend-1
+   "Tasa de supervivencia, excluidas las muertes por cáncer de mama.",
+   :button/mode-screen "Estudios de rutina",
+   :info/chemo-10
+   ", publicado en The Lancet, 2012.",
+   :tab-label/table "Tabla",
+   :results/curves-title-1
+   "Esta gráfica muestra el porcentaje de mujeres que sobreviven",
+   :faqs13-q "¿Quién desarrolló Predict?",
+   :about/over-menu-6 "Versiones anteriores",
+   :legal/table3
+   "Tabla 3: Coeficientes de factores de riesgo de tratamientos",
+   :info/ranges
+   "\nLos valores predeterminados son la estimación aproximada del beneficio. Cuando haces clic en mostrar rangos, se agrega un intervalo de predicción del 95% a la tabla y los beneficios estimados ya no se redondean al porcentaje más cercano. Es muy poco probable que el verdadero valor del beneficio esté fuera de este rango.",
+   :info/chemo-12
+   "Los tratamientos generalmente tienen el potencial de causar tanto daños como beneficios. Es importante sopesar ambos para llegar a una decisión. Algunos pueden causar más daño que beneficio a algunas personas.",
+   :results/press-and-hold
+   "presionar y sostener ",
+   :about/over-menu-1 "¿Para quién es?",
+   :home/wcifom-title
+   "¿Dónde puedo encontrar más información?",
+   :icons/other-causes " por otras causas",
+   :priv/table-4
+   "almacena el número de visitas de cada usuario, el tiempo de visita, etc.",
+   :info/h10-already-warning-1
+   "A las mujeres generalmente se les ofrece 5 años de terapia hormonal (endocrina) para ayudar a reducir las posibilidades de que el cáncer de mama regrese. Sin embargo, se han investigado los efectos de ofrecer una terapia extendida (duración total de la terapia hormonal de más de 5 años).",
+   :legal/priv-1 "Privacidad del sitio",
+   :ttt/c-t "quimioterapia ",
+   :texts/h-t " terapia hormonal ",
+   :info/size7
+   "- las células crecen más rápidamente y son menos similares a las sanas",
+   :about/hist-6-2
+   "Predict v2.0 usó un método impreciso para estimar el beneficio absoluto de la terapia, el cual resultó en una pequeña sobreestimación de los beneficios del tratamiento. En v2.0, el beneficio se calcula como la diferencia en la mortalidad específica por cáncer de mama con y sin tratamiento, pero es más apropiado estimar el beneficio como la diferencia en la mortalidad por todas las causas con y sin tratamiento porque si la mortalidad por cáncer de mama se reduce, la mortalidad por causas distintas al cáncer de mama aumentará ligeramente. En consecuencia, la sobreestimación del beneficio fue mayor en mujeres mayores con una mortalidad por causas distintas al cáncer de mama más alta. La siguiente tabla muestra los beneficios pronosticados de la quimioterapia basada en antraciclina (segunda generación) para una mujer con un tumor de 22 mm, grado 2, HER2 negativo, KI67 negativo, detectado clínicamente con 2 ganglios positivos, por edad y estado de ER.",
+   :navbar/overview "Aspectos generales",
+   :legal/disc-2
+   "La teoría detrás del modelo ha sido objeto de una revisión abierta por arbitraje académico en ",
+   :priv/disable
+   "¿Puedo desactivar las cookies?",
+   :horm/erplus-2
+   "Disponible cuando el tumor es positivo a la expresión de ER.",
+   :priv/table-11 "dos años",
+   :table/col1-header "Tratamiento",
+   :legal/table2-1 "Factor de riesgo",
+   :legal/table3-9
+   "Meta-análisis no publicado de 4 grandes ensayos aleatorizados",
+   :faqs14-a1
+   "\nEl equipo usó información del Eastern Cancer Registry and Information Center, que ahora forma parte del ",
+   :results/display-title-number " número",
+   :info/chemo-3 "Sin quimioterapia",
+   :info/dcis5
+   ", a menos que también haya habido un tumor invasivo.",
+   :about/over-menu-4 "Aspectos técnicos",
+   :texts/h10-out-of-4
+   " tratadas con sólo cirugía",
+   :faqs/faqs "Preguntas frecuentes",
+   :faqs3-q
+   "Si los datos utilizados son de pacientes de hace décadas, ¿acaso no estarán desactualizadas las predicciones que da?",
+   :about/hist-5-1
+   "Si bien el ajuste general de Predict versión 1 fue bueno en múltiples series de casos independientes, se ha demostrado que Predict subestima la mortalidad específica por cáncer de mama en mujeres que fueron diagnosticadas menores de 40 años, particularmente aquellas con enfermedad ER positiva (ver publicación en ",
+   :faqs13-a1
+   "El desarrollo del modelo fue un proyecto en colaboración entre The Cambridge Breast Unit, el University of Cambridge Department of Oncology y el Eastern Cancer Information and Registration Centre (ECRIC) del Reino Unido (ahora parte del National Cancer Registration and Analysis Service) y contó con el apoyo de una beca educativa sin restricciones de Pfizer Limited. Todos los involucrados agradecen cualquier comentario que puedas tener sobre Predict. Si tienes preguntas sobre su desarrollo o si hay otros aspectos que te gustaría agregar al modelo, infórmales por correo electrónico.",
+   :info/kI167-1 "Ki67 ",
+   :about/ee-add-1
+   "Adición de la terapia hormonal extendida (v2.2)",
+   :icons/bc-related
+   "muertes relacionadas con el cáncer de mama ",
+   :info/detected-1
+   "El cáncer pudo haber sido detectado por estudios de rutina (ej. un programa ",
+   :faqs2-q
+   "¿Cómo sé si las respuestas de Predict son correctas?",
+   :priv/table-6
+   "registra aproximadamente cuánto tiempo permanece un usuario en el sitio",
+   :about/ee-add-2-2
+   "La evidencia del efecto de esto proviene de los ensayos ATLAS y aTTom. Más de 12,000 pacientes con cáncer de mama fueron asignados al azar a 5 o 10 años de tamoxifeno en el estudio Atlas. La reducción del riesgo relativo fue de 0.29 para los años 10 a 15 con poco efecto en los años 5 a 10 (reducción del riesgo relativo 0.03) [5]. El estudio aTTom asignó al azar a 6,900 mujeres las opciones de detener el tamoxifeno o continuarlo hasta el año 10  (reportado sólo como un ‘abstract'). La reducción del riesgo relativo en la mortalidad específica por cáncer de mama a partir del año diez fue de 0.23. Un metanálisis ponderado por la inversa de la varianza de los dos estudios reportó una reducción del riesgo relativo de 0.26 (IC del 95%: 0.12 a 0.37)",
+   :info/mmets-6
+   "Haz click en ‘Desconocido’ si no tienes esta información disponible.",
+   :legal/table3-12
+   "Quimioterapia de segunda generación",
+   :if "si  ",
+   :home/wcifom-text2 "Acerca de Predict",
+   :legal/table1
+   "Coeficientes de factores de riesgo para la mortalidad por cáncer de mama en pacientes con ER + (los números se redondearon para la tabla)",
+   :info-title/grade "Grado del tumor",
+   :tool/when-i-add
+   "Debido a la forma en que el algoritmo de Predict calcula el beneficio probable de cada tratamiento, cuando agregues o elimines una opción de tratamiento, a veces verás cambios en el beneficio potencial de los otros tratamientos. Esto se debe a que el algoritmo calcula los beneficios para cada opción de tratamiento y el orden éstos hace una diferencia: el impacto del primer tratamiento significa que habrá menos personas para beneficiarse de los tratamientos restantes.",
+   :info-title/ranges "Mostrar rangos",
+   :navbarfaqs "Preguntas frecuentes",
+   :mmets/yes-means
+   "“Sí” significa que el nódulo positivo tiene micrometástasis únicamente",
+   :tab-label/icons "Íconos",
+   :faqs15-a1 "El sitio web lo desarrolló el ",
+   :about/tech-menu-1
+   "Historia de su desarrollo",
+   :treatment/chemo "Quimioterapia",
+   :about/hist-6-3
+   "La reducción proporcional en la tasa de mortalidad después de la terapia con bisfosfonatos (18%) se tomó del Early Breast Cancer Trialists' Collaborative Group (2015)(3). Se supone que esto es aplicable sólo en las mujeres posmenopáusicas (el estado menopáusico es ahora una opción en la herramienta). Es posible desactivar la opción de bifosfonatos en la pestaña 'Configuración' para las instituciones que no ofrecen bifosfonatos como opción de tratamiento.",
+   :about/tech-menu-8 "Aspectos técnicos",
+   :about/over3-2
+   "El sitio web ha sido desarrollado por el ",
+   :horm/erplus-3-1
+   "- utilizando datos sólo de ",
+   :texts/out-of-6 " más).",
+   :faqs1-q
+   "¿Qué pasa si no tengo todos los detalles solicitados en la sección de ingreso de datos?",
+   :about/hist-7-2
+   "A fines de 2018 o principios de 2019, esperamos poder lanzar una nueva versión de Predict que incluya varias adiciones al algoritmo. Esperamos introducir el efecto de la expresión del receptor de progesterona (expresión de PR) en los resultados y ofrecer dos opciones de tratamiento adicionales: radioterapia y cinco años de terapia hormonal adicional. A largo plazo, también esperamos poder mostrar datos sobre la recurrencia de la enfermedad, mostrando a las mujeres el tiempo que se estima sin que su cáncer regrese.",
+   :navbar/tech "Aspectos técnicos",
+   :results/display-title-percentage
+   " porcentaje",
+   :tool/print-button-label "Imprimir",
+   :about/over-2-4
+   "La sección sobre aspectos técnicos",
+   :home/online-tool
+   "\nPredict es una herramienta en línea que ayuda a pacientes y médicos a ver cómo los diferentes tratamientos para el cáncer de mama invasivo temprano pueden mejorar las tasas de supervivencia después de la cirugía.",
+   :navbar/add-lang "+ Agregar idioma",
+   :about/hist-7 "Versión futura",
+   :info/chemo-1 "La quimioterapia",
+   :info/size2 "grado",
+   :faqs6-q "¿Qué hay de otros tratamientos?",
+   :legal/cookie-6
+   "Predict utiliza Google Analytics para medir el tráfico del sitio web. Toda la información recopilada es anónima y no se utiliza para ningún otro propósito. Para más detalles ver la ",
+   :results/display-title-1
+   "muestra el porcentaje de mujeres que sobreviven al menos",
+   :about/hist-table-3
+   "Beneficio estimado a 10 años (%)",
+   :curves/x-axis "Años después de la cirugía",
+   :info/dcis3 "o en ",
+   :info/chemo-8
+   "Las definiciones de los diferentes regímenes de quimioterapia se encuentran en el artículo del Early Breast Cancer Trialists' Collaborative Group. \n      ",
+   :info/age2
+   "Puedes ingresar el número o usar los botones '+' o '-' para ajustarlo. También puedes usar las teclas de 'flecha hacia arriba’ y’flecha hacia abajo' para avanzar 1; o las teclas de 'flecha hacia la derecha’ y’flecha hacia la izquierda' para avanzar 5. Mantén presionada la tecla para repetir los pasos.",
+   :curve/legend-9 "Sólo cirugía",
+   :info-title/dashed1
+   "Si se excluyeran las muertes por cáncer de mama\n",
+   :table/h5-already
+   "Tratamientos ya recibidos ",
+   :icons/bc-related-1
+   "relacionadas al cáncer de mama",
+   :legal/table3-14
+   "Quimioterapia de tercera generación",
+   :info/chemo-5
+   "es la abreviatura para los regímenes de quimioterapia de segunda generación, como FEC (fluorouracilo, epirubicina y ciclofosfamida)",
+   :info/her2-3
+   "Haz click en ‘Desconocido’ si no tienes esta información disponible. ",
+   :tool/preamble
+   "Recomendamos que las pacientes usen esta herramienta bajo la supervisión de su médico.",
+   :text/die-anyway-1
+   "De las mujeres que no sobrevivirían, ",
+   :priv/table-10
+   "almacena de dónde viene la visita ",
+   :about/over-1 "¿Para quién es?",
+   :table/col3-header
+   " % Sobrevivencia promedio",
+   :about/over-2-3
+   "Aunque Predict produce buenas estimaciones, no puede decir de manera individual si una paciente sobrevivirá a su cáncer o no. Sólo puede proporcionar la tasa de supervivencia promedio para personas en el pasado con una edad similar y con cánceres similares. ",
+   :icons/horm "terapia hormonal",
+   :icons/surgery-alone " con sólo cirugía",
+   :info-title/post-meno "Posmenopáusico",
+   :about/overview "Aspectos generales",
+   :button/post-meno-pre "No\n",
+   :info/horm-5
+   "Algunos medicamentos para la terapia hormonal actúan bloqueando la acción del estrógeno en las células y otros a través de diminuir la cantidad de estrógeno en el cuerpo (la terapia hormonal para el cáncer de mama es lo opuesto a la terapia de reemplazo hormonal o TRH, que las mujeres toman para aumentar los niveles de estrógeno para ayudar a lidiar con los efectos secundarios de la menopausia).",
+   :legal/table1-4 "Grado (1,2,3)",
+   :tool/largest-size
+   "En caso de haber más de un tumor, ingresa el tamaño de el más grande. ",
+   :results/why-no-ee-benefit
+   "¿Por qué no veo ningún beneficio aparente de extender la terapia endocrina?",
+   :button/micromets-yes "Sí",
+   :about/hist-7-3
+   "También planeamos extender el sitio de forma que podamos mostrar una cuantificación de los posibles daños causados por los tratamientos (es decir, la proporción de mujeres similares que se estima que sufran cada uno de los  efectos secundarios o eventos adversos posibles). Esto permitirá que se consideren los daños potenciales, además de los beneficios, de cada una de las opciones de tratamiento. ",
+   :legal/alg-4
+   "Para las muertes por cáncer de mama, Predict utiliza un modelo de riesgos proporcionales en el que cada factor de riesgo y tratamiento multiplica el riesgo acumulado basal por una cantidad fija conocida como cociente de riesgo (hazard ratio) o riesgo relativo, que es en esencia el cambio proporcional en el riesgo de mortalidad anual. Esto significa que el riesgo acumulado es el producto de tres componentes: el riesgo de referencia (probabilidad de morir por algo distinto al cáncer de mama), los cocientes de riesgo para los factores de riesgo (el aumento del riesgo de morir a causa del cáncer de mama) y los cocientes de riesgo para los tratamientos (la disminución del riesgo gracias a los tratamientos).",
+   :about/hist-3
+   "Extensión del modelo: expresión de HER2 (versión 1.1)",
+   :info/h5-already-1 "Si ",
+   :faqs16-q
+   "¿Dónde puedo encontrar más información sobre el cáncer de mama?",
+   :about/tech-0-1
+   "Predict es una herramienta en línea diseñada para ayudar a médicos y pacientes a tomar decisiones informadas sobre el tratamiento a seguir después de la cirugía para cáncer de mama invasivo temprano.",
+   :info/bis-3
+   "Los tratamientos generalmente tienen el potencial de causar tanto daños como beneficios. Es importante sopesar ambos para llegar a una decisión. Algunos pueden causar más daño que beneficio a algunas personas.",
+   :legal/disc-8 " y  ",
+   :button/delay-ys5 "Sí",
+   :legal/table3-10
+   "Bisfosfonatos (si es posmenopáusico)",
+   :about/over-1-1-1
+   "La herramienta es para mujeres que se han sometido a cirugía por cáncer de mama invasivo temprano y están decidiendo qué otros tratamientos recibir. ",
+   :legal/table2
+   "Tabla 2: Coeficientes de factores de riesgo para la mortalidad por cáncer de mama en pacientes con ER - (los números se redondearon para la tabla)",
+   :results/curves-title-1-1
+   "Esta gráfica muestra el porcentaje de mujeres que sobreviven a partir de ahora dado que recibieron cirugía hace 5 años.",
+   :tools/settings "Configuración",
+   :results/press-and-hold-text
+   "para observar otro decimal",
+   :bis/post-meno
+   "Disponible para mujeres en posmenopausia",
+   :treatment/horm-delay
+   "Terapia hormonal adicional",
+   :legal/alg-section
+   "Explicación del algoritmo Predict",
+   :table/no-bc-death-2
+   "% sobreviviría por lo menos",
+   :legal/cookie-7
+   "Política de privacidad de Google",
+   :legal/table2-2
+   "Logaritmo del multiplicador del riesgo de referencia",
+   :about/hist-5-2
+   "Otra limitación de la versión 1 fue el uso de categorías discretas para el tamaño del tumor y el estado de los ganglios; esto resultaba en cambios en la estimación de riesgo, ya que pasaba de una categoría a la siguiente. Por ejemplo, la versión 1 pronosticaría que una mujer con un tumor de 18 mm o 19 mm tendría la misma mortalidad específica por cáncer de mama si todos los demás factores pronósticos fueran iguales, mientras que la mortalidad específica del cáncer de mama de las mujeres con un tumor de 19 mm o 20 mm sería diferente.",
+   :texts/out-of-2 " mujeres ",
+   :info/er-status1 "La expresión de ER",
+   :tool/info-prompt-no
+   "Seleccione \"No\" sólo si está considerando opciones de terapia inmediatamente después de la cirugía.",
+   :home/endorsement
+   "Avalado por el American Joint Committee on Cancer (AJCC).",
+   :info/nobody-1
+   "Éste es un porcentaje teórico, refleja lo que se esperaría si hubiera un tratamiento ficticio que garantizara que las mujeres representadas no murieran de cáncer de mama. Por lo tanto, la cifra es relevante para pacientes con cáncer de mama de características similares a las ingresadas, y no es representativa de la población femenina general de esta edad. Ver ",
+   :button/horm-h5 "5 Años",
+   :legal/table2-12 "Grado (1,2,3)",
+   :home/wcifom-text1 "Para leer más, ve a ",
+   :about/over3-4
+   "Predict ha sido respaldado por el American Joint Committee on Cancer.",
+   :legal/cookie-3
+   "Information Commissioner’s Office website.",
+   :button/horm- "No",
+   :faqs1-a1
+   "Si ingresas la opción ‘desconocido’, la herramienta Predict va a usar el valor promedio. Esto simplemente arrojará resultados menos personalizados.",
+   :priv/table-13 "una año",
+   :about/hist-2-1
+   "La validez clínica de un modelo de predicción se puede definir como la precisión del modelo para predecir eventos futuros. Las dos medidas clave de validez clínica son la calibración y la discriminación.",
+   :faqs7-a1
+   "A veces se recomienda la quimioterapia antes de la cirugía inicial (quimioterapia 'neoadyuvante'). La versión actual de Predict no está diseñada para usarse en estas circunstancias.",
+   :info/nodes-5 "micrometástasis",
+   :chart/add-bene-2 "es",
+   :about/over-1-2
+   "\nLa versión actual de la herramienta no incluye todos los tratamientos disponibles actualmente. Estamos trabajando para incluir más en un futuro cercano. Mientras tanto, un médico capacitado podrá asesorar sobre todas las opciones de tratamiento adecuadas para un paciente en particular.",
+   :table/plus-h-1 "+ Terapia hormonal",
+   :info/horm-5-5
+   "La terapia hormonal generalmente se prescribe por un período de 5 años, sin embargo, los ensayos han analizado si algunas mujeres podrían beneficiarse de seguir con la terapia hormonal durante otros 5 años, es decir, 10 años en total. Si se está considerando esto, puede ser útil seleccionar las opciones de 5 y 10 años de terapia hormonal para comparar los resultados de supervivencia.",
+   :navbar/legal "Aspectos legales",
+   :legal/impl-2
+   "El modelo Predictv2.1 fue escrito originalmente en el lenguaje de programación \"R\" por el profesor Paul Pharoah; más tarde, también fue escrito en el lenguaje de programación ClojureScript, y ésta es la versión que ahora se encuentra en el sitio web. La implementación completa está disponible en una colección de datos abiertos para todo el público en ",
+   :info/h5-already-3
+   ", ingresa 'Sí' aquí. Predict calculará entonces cómo otros 5 años de tratamiento afectarán tu supervivencia. Por supuesto, supondrá que ya has sobrevivido los primeros 5 años después de la cirugía. En esta etapa, la única decisión con la que Predict puede ayudarte es si deseas continuar con los 5 años adicionales de terapia hormonal. Para ver este beneficio en su contexto adecuado, completa los detalles de tu cáncer al momento del diagnóstico y también los tratamientos que ",
+   :chart/callout-1 "sobrevive por lo menos ",
+   :about/over-3 "¿Quién creó Predict?",
+   :tab-label/texts "Textos",
+   :texts/out-of-4 "tratadas con ",
+   :button/micromets-unknown "Desconocido",
+   :info/dashed-2 " en ",
+   :about/hist-table-1 "Edad",
+   :table/no-bc-death-1
+   "Si se excluyeran las muertes por cáncer de mama,",
+   :legal/cookie-4
+   " Al usar el sitio web de Predict, estás dando consentimiento implícito para que se puedan usar cookies; sin embargo, puedes deshabilitar el uso de cookies. Consulta lo siguiente para obtener más detalles.",
+   :priv/table-3 "Vencimiento",
+   :texts/h10-out-of-3
+   "que no han recibido tratamiento hormonal adicional",
+   :info/chemo-4 "2da gen",
+   :legal/table1-5 "grado",
+   :chart/add-bene-3 "%  a ",
+   :info/h10-already-warning-3-2 ", y ",
+   :priv/disable-3
+   " para decidir dejar de ser rastreado por Google Analytics. Puedes agregar este complemento a tu navegador yendo a Google. Para obtener más detalles sobre el control de cookies, visita las páginas de ayuda del navegador que estás utilizando.",
+   :info/tra-3
+   "Los tratamientos generalmente tienen el potencial de causar tanto daños como beneficios. Es importante sopesar ambos para llegar a una decisión. Algunos pueden causar más daño que beneficio a algunas personas.",
+   :legal/table3-4 "Riesgo relativo",
+   :faqs7-q
+   "¿Qué hay del tratamiento neoadyuvante?",
+   :results/view-type "Esta tabla",
+   :info/dcis4
+   "CLis (Carcinoa Lubulillar in situ)",
+   :close "Cerrar",
+   :legal/priv-2
+   "La información ingresada en Predict nunca sale de tu propio equipo local. La información ingresada en 'Configuración' se limita a la configuración de la herramienta y se almacena en tu equipo local.",
+   :info/dashed-1-2
+   "Esta línea representa la tasa de supervivencia máxima posible: es lo que sucedería si pudiéramos garantizar que estas mujeres no murieran de cáncer de mama. (Técnicamente, es",
+   :legal/alg-title "Algoritmo",
+   :chart/callout-2 "años",
+   :info/KI67-2
+   "es una proteína que se encuentra en las células cuando se están preparando para dividirse, por lo que el porcentaje de células Ki67 en un tumor puede indicar qué tan rápido está creciendo el tumor. Un resultado \"positivo\" significa que hay una gran cantidad de células con la proteína Ki67. \"Negativo\" significa que hay un número bajo de células con la proteína Ki67. Para Predict, definimos 'positivo' como más del 10% de las células que muestran Ki67.",
+   :about/over-1-3
+   "Predict pide cierta información sobre el cáncer de la paciente. Los puntos de información que solicita son aquellos sobre los que tenemos suficiente información para predecir cómo afectan las tasas de supervivencia. Predict no diferencia entre los tipos de cirugía (por ejemplo, mastectomía o tumorectomía) ni solicita factores de estilo de vida como fumar o hacer ejercicio. Esto afectará la supervivencia, pero por el momento, no podemos decir cuánto.",
+   :info-title/tra "Trastuzumab",
+   :info/horm-1 "La terapia hormonal",
+   :button/delay- "No",
+   :button/post-meno-unknown "Desconocido",
+   :table/no-bc-death-5
+   "% moriría por otras causas.",
+   :info-header "Edad",
+   :button/chemo- "Ninguna",
+   :priv/table-9
+   "al finalizar la sesión de navegación",
+   :info/horm-8 "[1] Fuente: ",
+   :legal/table2-3
+   "Edad al momento de la cirugía (años)",
+   :info/size1 "El ",
+   :about/over3-3
+   " en la Universidad de Cambridge, quienes están financiados por una generosa donación de la David and Claudia Harding Foundation y la Winton Charitable Foundation.",
+   :info/h5-already-5
+   " en los primeros cinco años.",
+   :button/her2-status-no "Negativo",
+   :info-bis-1 "Los bisfosfonatos",
+   :faqs12-a1
+   "Por el momento, Predict sólo brinda información sobre los beneficios de cada tratamiento, pero cada tratamiento también tiene el potencial de causar efectos secundarios y es importante sopesarlos al considerar las opciones de tratamiento. Algunas organizaciones de caridad como Breast Cancer Care y Macmillan brindan buena información sobre los efectos secundarios de cada tratamiento. Planeamos incluir una estimación de la probabilidad de diferentes efectos secundarios de cada tratamiento en la próxima versión de Predict.",
+   :faqs4-q
+   "¿De qué sirven estos tipos de estadísticas si, como paciente, sólo hay dos opciones: curarse o no curarse?",
+   :info/nobody-3
+   "para los detalles completos. ",
+   :footer/sttt-2
+   "Si estas luchando contra el cáncer, con apoyo suele ser más fácil. A\bquí puedes encontrar más enlaces e información. ",
+   :about/hist-5-4
+   "Calibración en la base de datos de validación de enfermedad ER negativa: Predict v1.2 sobreestimó el número de muertes por cáncer de mama en un 10 por ciento (observó 447 en comparación con 492 pronosticadas). Esta sobreestimación fue más notable en los tumores más grandes y en los tumores de alto grado. En contraste, la calibración de Predict v2.0 en casos ER negativos fue excelente (pronosticó 449). Calibración en la base de datos de validación de enfermedad ER negativa: la calibración tanto de Predict v1.2 como de Predict v2.0 fue buena en casos ER positivos (muertes por cáncer de mama observadas 633 en comparación con 643 (v1.2) y 634 (v2.0) pronosticadas). Sin embargo, como se describió anteriormente, Predict v1.2 subestimó significativamente la mortalidad específica por cáncer de mama en mujeres diagnosticadas con enfermedad ER positiva a edades más tempranas, mientras que el ajuste de Predict v2.0 funcionó adecuadamente en todos los grupos de edad. ",
+   :legal/disc-title
+   "Descargo de responsabilidad",
+   :info/dashed-3 "la definición matemática",
+   :button/tra- "No",
+   :priv/table-5 "dos años",
+   :tool/more-disclaimer-details
+   " Haz click aquí para más detalles. ",
+   :info/nodes-2 " nódulos positivos ",
+   :button/show-uncertainty-yes "Sí",
+   :about/over-1-1-2
+   "Los datos en los que se basa PREDICT no incluyen información sobre la presencia de enfermedad bilateral. Se desconoce el desempeño del modelo en mujeres con cáncer de mama bilateral. Los beneficios de la quimioterapia utilizados por este modelo se obtuvieron del metanálisis del Early Breast Cancer Trialist Collaborative Group de estudios de quimioterapia adyuvante. Es probable que la quimioterapia neoadyuvante aporte un beneficio similar. No está diseñado para mujeres cuyo cáncer ya se ha diseminado a partes distantes del cuerpo en el momento del diagnóstico o para mujeres que sólo tienen cáncer de mama no invasivo, como el carcinoma ductal in situ o el carcinoma lobular in situ.",
+   :legal/cookie "Política sobre cookies",
+   :about/hist-4-1
+   "En el modelo v1.2 se  agregó el estado KI67. El efecto pronóstico de KI67 se tomó de datos publicados que muestran que los tumores ER positivos que expresan KI67 están asociados con una supervivencia relativa 30 por ciento menor.",
+   :tool/results "Resultados",
+   :table/plus-c "+ Quimioterapia",
+   :info/size3
+   "del tumor describe cuán diferentes son las células cancerosas en comparación con las células normales. En los informes de patología, a veces se nombran como 'diferenciación':",
+   :curve/legend-3
+   "Supervivencia sin terapia hormonal adicional",
+   :chart/legend-horm "terapia hormonal",
+   :legal/cookie-5
+   "¿Qué cookies usa el sitio web Predict?",
+   :navbar/earlier "Versiones anteriores",
+   :legal/m-7 "nódulos",
+   :button/grade-grade1 "1",
+   :home/wipf-text1
+   "Predict es para médicos, pacientes y sus familiares. ",
+   :button/chemo-3rd "3ra gen",
+   :icons/extra " extra",
+   :info/er-status3 "Es esencial conocer la ",
+   :info-title/h10-already-warning
+   "Extender la terapia hormonal por otros 5 años.",
+   :table/no-bc-death-4 " años, y ",
+   :faqs9-q
+   "¿Qué ocurre en casos de cáncer metastásico?",
+   :about/tech-menu-6 "Cómo funciona Predict",
+   :legal/cookie-1
+   "Una cookie (o galleta informática) es una pequeña cantidad de datos enviados a tu computadora y almacenados por tu navegador cuando visitas algunos sitios web. Las cookies permiten que un sitio web reconozca el dispositivo de un usuario, p. ej. computadora, teléfono móvil.\n",
+   :icons/fuerther "la extensión de la ",
+   :legal/table2-10 "Tamaño del tumor (mm)",
+   :curev/legend-2
+   "Beneficio adicional de 5 años de terapia hormonal adicional",
+   :info/dcis1
+   "El modelo Predict no está diseñado para ser usado en ",
+   :legal/disc-6 ", el  ",
+   :priv/table-2 "Detalles",
+   :help/size "Tamaño del tumor (mm)",
+   :about/ee-add-4
+   "Ten en cuenta que los datos del ensayo Atlas y aTTom se basaron en mujeres que fueron tratadas durante los primeros cinco años con tamoxifeno en lugar de un inhibidor de aromatasa.",
+   :home/wdido-text
+   "Predict solicita algunos detalles sobre la paciente y el cáncer. Después, con datos pasados sobre la supervivencia de mujeres con condiciones similares, estima la proporción probable de mujeres que sobrevivirán hasta quince años después de su cirugía con diferentes combinaciones de tratamientos.",
+   :info/chemo-11
+   "\nEn el análisis EBCTCG 2012, se demostró que el régimen de dosis altas acumuladas de antraciclinas es equivalente al régimen basado en taxanos y debe considerarse como de tercera generación.",
+   :ttt/ox-comma ", y ",
+   :legal/table2-11 "Número de nódulos",
+   :about/hist-6-4
+   "La reducción proporcional en la tasa de mortalidad después de la terapia con bisfosfonatos (18%) se tomó del Early Breast Cancer Trialists' Collaborative Group (2015)(3). Se supone que esto es aplicable sólo en las mujeres posmenopáusicas (el estado menopáusico es ahora una opción en la herramienta). Es posible desactivar la opción de bifosfonatos en la pestaña 'Configuración' para las instituciones que no ofrecen bifosfonatos como opción de tratamiento.",
+   :horm/erplus-1
+   "Terapia hormonal (endocrina). ",
+   :about/over-menu-3
+   "Quién desarrolló Predict",
+   :legal/cookie-8
+   "Se usan las siguientes cookies:",
+   :legal/impl-3 " GitHub.",
+   :tool/detected-warn-1
+   "Detectado por estudios de",
+   :button/grade-grade3 "3",
+   :legal/table3-5 "Fuente",
+   :about/hist-2-4
+   "También validamos Predict usando un conjunto de datos de British Columbia que se había utilizado previamente para una validación de Adjuvant! Online. El conjunto de datos de British Columbia incluyó mujeres diagnosticadas con cáncer de mama entre 1989-2003 y seguidas durante 10 años.  Predict v1.0 proporcionó estimaciones de supervivencia generales y específicas de cáncer de mama que fueron, como mínimo, tan precisas como las estimaciones de Adjuvant! Los resultados de esta validación se publicaron en el",
+   :info/bis-2
+   " son medicamentos que originalmente se desarrollaron para ayudar a detener el debilitamiento de los huesos (osteoporosis), pero se ha descubierto que también ayudan a prevenir la propagación del cáncer a los huesos en mujeres posmenopáusicas. Los bisfosfonatos más comunes son el ácido zoledrónico, el ibandronato y el clodronato.",
+   :tab-label/chart "Barra",
+   :about/over-2-2
+   "\nPredict ha sido probado para asegurarse de que las estimaciones que produce sean tan precisas como sea posible con base en el conocimiento actual. Originalmente, Predict se desarrolló utilizando datos de más de 5000 mujeres con cáncer de mama. Después, sus predicciones se probaron con datos de otras 23,000 mujeres de todo el mundo para asegurarse de que proporcionaran la mejor estimación posible.",
+   :navbar/about "Acerca de Predict",
+   :info-title/bis "Bifosfonatos",
+   :info/h10-already-warning-7
+   "Dado que la reducción en la recurrencia del cáncer de mama que se informa aquí al extender la terapia hormonal con inhibidores de la aromatasa es similar a la reportada por los ensayos con tamoxifeno, parece razonable suponer que el beneficio de extender la terapia con inhibidores de la aromatasa de 5 a 10 años probablemente será similar al beneficio del tamoxifeno, mostrado en Predict.",
+   :info-title/er-status
+   "Expresión de ER (Receptor de estrógenos)",
+   :about/hist-2-3
+   "Predecir fue validado originalmente usando un conjunto de datos de más de 5000 pacientes con cáncer de mama de la West Midlands Cancer Intelligence Unit también diagnosticadas durante 1999-2003 y seguidas durante una mediana de 4.8 años.",
+   :results/year-picker-label
+   "Selecciona el número de años desde la cirugía que deseas considerar:",
+   :button/ki67-status-no "Negativo",
+   :about/hist-6
+   "Extensión y corrección del modelo (versión 2.1)",
+   :table/col2-header "Beneficio adicional",
+   :button/dcis-yes "Sí",
+   :legal/m-6 "Número de nódulos",
+   :button/dcis-no "No",
+   :about/over-menu-2 "Cómo funciona Predict",
+   :info-title/mmets
+   "Micrometástasis solamente",
+   :icons/due-to "debido a ",
+   :horm/erplus-3-2 "estudios de tamoxifeno",
+   :info/detected-3
+   " tales como los del NHS Breast Screening Programme); o por síntomas, y esto afecta los posibles resultados para la paciente.",
+   :info-title/ki167 "Expresión de Ki67",
+   :about/tech-menu-5 "¿Para quién es?",
+   :info/detected-4 ".",
+   :button/tra-yes "Sí",
+   :tool/if-unsure
+   "Si no estás seguro de los datos de ingreso o salida, haz click en el ",
+   :info/size5
+   " - las células crecen lentamente y son similares a las células sanas",
+   :info/when-i-add
+   "Cuando agrego o elimino un tratamiento, ¿por qué a veces cambian los resultados para otros tratamientos?",
+   :help/age "Edad al momento del diagnóstico",
+   :about/hist-5
+   "Reajuste del modelo (versión 2.0)",
+   :legal/table1-6
+   "Detectado por estudios de rutina  (0,1)",
+   :faq-head-1 "¿Buscas asesoría?",
+   :navbar/tool "Herramienta Predict",
+   :info/dcis6
+   "\nSi el cáncer de mama invasivo coincide con DCIS o LCIS, utiliza el tamaño del tumor invasivo en el modelo Predict.",
+   :about/hist-4
+   "Extensión del modelo: expresión de KI67 (versión 1.2)",
+   :about/hist-table-2 "ER",
+   :about/over-2-1
+   "Las estimaciones que produce Predict se basan en estudios científicos que se han llevado a cabo sobre la eficacia de los tratamientos contra el cáncer de mama. Con base en estudios que involucraron a miles de mujeres sabemos que el beneficio del tratamiento se ve afectado por diferentes factores como el tamaño y el tipo de cáncer en el momento del diagnóstico, si el cáncer se ha diseminado hacia ganglios linfáticos y si el cáncer expresa o no marcadores como el receptor de estrógenos (ER), HER2 y KI67. Al analizar los resultados de estos estudios, los estadísticos pueden decir cómo estos aspectos del cáncer pueden afectar la supervivencia promedio y cuánto beneficio se puede obtener en promedio de las diferentes opciones de tratamiento.",
+   :curves/y-axis
+   "Porcentaje de mujeres sobrevivientes",
+   :about/hist-2-2
+   "La calibración se refiere a qué tan bien el modelo predice el número total de eventos en un conjunto de datos dado. Un modelo perfectamente calibrado es aquel en el que el número de eventos observados (o reales)  en una cohorte de pacientes dada es el mismo que el número de eventos predichos por el modelo. La discriminación es una medida estadística que indica qué tan bien el modelo predice la ocurrencia de un evento en pacientes individuales; es un número entre cero y uno. Generalmente se obtiene del área bajo una curva ROC (acrónimo de Receiver Operating Characteristic, o Característica Operativa del Receptor), que es una representación gráfica que muestra la tasa positiva verdadera (sensibilidad) contra la tasa de falsos positivos (sensibilidad o probabilidad de falsa alarma).\n",
+   :about/technical-header "Aspectos técnicos",
+   :info/er-status4 " expresión de ER",
+   :tab-label/curves "Curvas",
+   :legal/table3-15
+   "Meta-análisis de ATLAS y ensayos aTTom ",
+   :chart/title "Sobrevivencia promedio",
+   :home/wipf-title "¿Para quién es Predict?",
+   :navbar/pubs "– Publicaciones",
+   :button/show-uncertainty-no "No",
+   :home/wdido-title "¿Qué hace Predict?",
+   :curve/legend-8
+   "Beneficio adicional de la terapia hormonal",
+   :legal/impl-1
+   "Implementación del algoritmo",
+   :texts/out-of-5 "están vivas (",
+   :note/ki67 "Positivo significa más de 10%",
+   :info/h10-already-warning-4
+   "Esto mostró un pequeño beneficio para la supervivencia de las mujeres que continuaron con tamoxifeno. Actualmente no hay estudios sobre el otro tipo principal de terapia hormonal, los inhibidores de la aromatasa, que hayan reportado mortalidad específica por cáncer de mama. El beneficio de extender el tratamiento con tamoxifeno a 10 años sólo fue aparente en los años 10-15 después de su cirugía. Por lo tanto, no verás ningún beneficio cuando veas la supervivencia sólo hasta 10 años después de la cirugía. Al hacer clic en la vista de \"curvas\" de los datos y mostrar hasta 15 años después de la cirugía, los beneficios potenciales son más claros.",
+   :results/display-title-1-2
+   "de mujeres que sobreviven al menos ",
+   :about/over-0
+   "Predict es una herramienta que ayuda a mostrar cómo los tratamientos contra el cáncer de mama después de la cirugía podrían mejorar las tasas de supervivencia. Una vez que se hayan ingresado los detalles sobre la paciente y su cáncer, la herramienta mostrará cómo se esperaría que los diferentes tratamientos mejoren las tasas de supervivencia hasta 15 años después del diagnóstico. Esto se basa en datos pasados de mujeres en condiciones similares.",
+   :info-title/dcis "El tumor es CDis o CLis",
+   :legal/table1-1 "Factor de riesgo",
+   :about/ee-add-2-1
+   "Las mujeres con enfermedad ER positiva que han sobrevivido 5 años tienen la opción de suspender su terapia hormonal o continuar durante otros cinco años. Hemos agregado una opción para estimar los resultados a diez años para una mujer que ya ha sobrevivido cinco años y decide adicionar 5 años de terapia hormonal, es decir, supervivencia de los años 5 a 15 después del diagnóstico.",
+   :dcis/invasive
+   "Predict no debe ser usado para CDIS/CLIS sin tumor invasivo",
+   :info-title/nobody1
+   "Si se excluyeran las muertes por cáncer de mama",
+   :faqs/head-3
+   "Información sobre efectos secundarios",
+   :tool/h10-only
+   "\nEsta opción sólo explora la opción de recibir terapia hormonal adicional de 5 años. Pero también seleccione los tratamientos ya recibidos en los 5 años anteriores.",
+   :info/h10-already-warning-6-5
+   "metanálisis aquí ",
+   :priv/table-8
+   "almacena el número de visitas de cada usuario",
+   :faqs8-q
+   "¿Qué ocurre con los hombres con cáncer de mama?",
+   :nodes/enabled-one
+   "Habilitado cuando el número de nódulos positivos es 1.",
+   :info/size
+   "Tamaño del tumor en milímetros. Si hubo más de un tumor, ingresa el tamaño del tumor más grande.",
+   :priv/table-14
+   "Hotjar cookie. Esta cookie se establece una vez que un visitante minimiza un widget Feedback Poll. Se utiliza para garantizar que el widget permanezca minimizado cuando el visitante navega por el sitio.",
+   :legal/table3-1 "Tratamiento",
+   :info/h5-already-6
+   "Si acabas de someterte a una cirugía y estás eligiendo entre un curso de terapia de 5 o 10 años, ingresa 'No' aquí.",
+   :legal/table1-3
+   "Edad al momento de la cirugía (años)",
+   :legal/table1-2
+   "Logaritmo del multiplicador del riesgo de referencia",
+   :about/history-header
+   "Historia de su desarrollo",
+   :info-title/size "Tamaño",
+   :info/horm-4
+   ", involucra tomar medicamentos para prevenir el crecimiento de células tumorales que son impulsadas por la hormona estrógeno. Los medicamentos de este tipo incluyen tamoxifeno (los nombres de marca incluyen Nolvadex, Istabul, Valodex y Soltamox) e inhibidores de aromatasa como anastrozol, exemestano y letrozol (nombres de marca Arimidex, Aromasin y Femara). [1]",
+   :help/post-meno "Posmenopáusico",
+   :full-paper-online
+   "[Artículo completo en línea]",
+   :legal/alg-2
+   "Los detalles del formulario para los riesgos acumulativos de línea de base se proporcionan en la ",
+   :chart/legend-h10 "continuación de la ",
+   :info/horm-7
+   "Es útil explorar las opciones de 5 años y 10 años de terapia hormonal para comparar los resultados de supervivencia entre ambas opciones.",
+   :help/grade "Grado de tumor",
+   :info/mmets-2
+   " son pequeños grupos de células cancerosas que se encuentran en los ganglios linfáticos.",
+   :legal/disc-4 ", el ",
+   :navbar/wiif "– ¿Para quién es?",
+   :about/tech-0-4 "Haz click aquí",
+   :info/detected-2 "de detección temprana",
+   :about/hist-7-1
+   "\nAdición de terapia hormonal prolongada, radioterapia, adición del estado de PR (receptor de progesterona) como una variable de entrada y presentación de daños y beneficios potenciales.",
+   :texts/out-of-1 " de ",
+   :info/h10-already-warning-5
+   "Si actualmente quieres conocer los beneficios potenciales para una mujer que ya ha recibido 5 años de terapia hormonal y está considerando continuar durante 5 años más, selecciona 'Sí' para 'Ya recibió 5 años de terapia hormonal'. Los datos que se muestran cuando se selecciona 'Sí' sólo se usan en una mujer que ha sobrevivido los primeros 5 años después de la cirugía y, por lo tanto, NO se usan en alguien que se haya sometido recientemente a una cirugía y esté considerando un programa de terapia hormonal de 10 años a partir de ahora.",
+   :faqs5-a1
+   "Para algunas mujeres la radioterapia es una opción potencial de tratamiento. Planeamos incluirla en la próxima versión del modelo.",
+   :info/horm-3 " terapia endocrina ",
+   :about/hist-7-1-1
+   "Esperamos introducir el efecto de la expresión tumoral del receptor de progesterona (estado de PR) en los resultados y el beneficio de la radioterapia. A largo plazo, también esperamos poder mostrar datos sobre la recurrencia de la enfermedad, para mostrarle a las mujeres el tiempo estimado sin que su cáncer regrese. ",
+   :faqs5-q "¿Qué hay de la radioterapia?",
+   :info-title/chemo "Quimioterapia",
+   :chart/surgery-only
+   "La supervivencia con sólo cirugía es ",
+   :about/tech-menu-4
+   "Regresar a Aspectos generales",
+   :help/nodes "Nódulos positivos",
+   :chart/without
+   "La supervivencia sin terapia adicional es ",
+   :results/display-title-3
+   " años después de la cirugía.",
+   :texts/h10-out-of-1 " de ",
+   :home/start-button "Comenzar Predict",
+   :info/tra-1 "Trastuzumab",
+   :info-title/horm "Terapia hormonal",
+   :table/surgery-only "Sólo cirugía",
+   :info/dashed-1-1
+   "La línea punteada muestra la tasa de supervivencia esperada si el cáncer de mama no causara ninguna muerte. Disminuye con el tiempo porque todos corren el riesgo de otras causas de muerte. La línea es similar a la tasa de supervivencia para las mujeres sin cáncer de mama, pero se aplica a las mujeres que han tenido cáncer de mama pero mueren por otras causas no relacionadas.",
+   :info/mmets-3
+   "Los criterios más recientes de estadificación del American Joint Committee on Cancer (AJCC) definen las micrometástasis como grupos de células cancerosas mayores de 0.2 mm pero no mayores de 2.0 mm en su dimensión más grande. Las investigaciones sugieren que las pacientes que sólo tienen micrometástasis tienen un mejor pronóstico que aquellas que tienen grupos de células mayores de 2 mm. [1]",
+   :info/her2-2-1
+   " se refiere a si las células tumorales tienen o no un alto número de receptores de HER2. HER2 se conoce como un factor de crecimiento, y tener un alto número de receptores HER2 en las células puede hacer que se dividan demasiado, lo que lleva al crecimiento tumoral. Es por eso que algunos tratamientos tienen como objetivo bloquear este receptor. Alrededor de una cuarta parte de los tumores de cáncer de mama tienen una gran cantidad de receptores HER2 y se conocen como \"HER2 positivos\". Hay algunos medicamentos que están específicamente dirigidos a estos tumores, como trastuzumab (Herceptin) y otros.",
+   :button/chemo-2nd "2da gen",
+   :info/nodes-4
+   "Si aquí seleccionas ‘1’, la opción ",
+   :about/hist-3-2
+   "Ésta mostró que la inclusión de la expresión de HER2 en el modelo mejoró las estimaciones de mortalidad específica por cáncer de mama, especialmente en pacientes con HER2 positivo.",
+   :info/post-meno
+   "El tratamiento con bisfosfonatos sólo se recomienda para mujeres posmenopáusicas.",
+   :treatment/bis "Biofosfonatos",
+   :legal/alg-3 " descripción matemática. ",
+   :faqs10-q
+   "¿Qué hay del carcinoma lobulillar in situ (CLis) y carcinoma ductal in situ (CDis)? ",
+   :tool/info-prompt-yes
+   "Selecciona \"Sí\" sólo si ya has recibido 5 años de terapia hormonal. Ingresa los detalles de otras terapias recibidas.",
+   :about/hist-6-1
+   "Adición de la opción de tratamiento con bifosfonatos y adición de resultados a 15 años.",
+   :help/ki67-status "Expresión de Ki-67 ",
+   :curve/legend-6
+   "Beneficio adicional de la quimioterapia",
+   :info/h5-already-2
+   "ya has recibido 5 años de terapia hormonal",
+   :about/tech-0-5
+   "para encontrar más sobre el algoritmo.",
+   :about/over3-1
+   "El desarrollo del modelo fue un proyecto en colaboración entre The Cambridge Breast Unit, el University of Cambridge Department of Oncology y el Eastern Cancer Information and Registration Centre (ECRIC) del Reino Unido (ahora parte del National Cancer Registration and Analysis Service) y contó con el apoyo de una beca educativa sin restricciones de Pfizer Limited (la empresa no tuvo ninguna influencia en el modelo).  ",
+   :faqs16-a1
+   "Hay una gran cantidad de información sobre el cáncer de mama disponible en internet. Una de las mejores y más confiables fuentes es Cancer Research UK, junto con las de Macmillan y Breast Cancer Care. Su información está escrita por expertos, está actualizada y en un estilo que es fácil de entender.",
+   :chart/legend-1
+   "Tasa de supervivencia, excluidas las muertes por cáncer de mama.",
+   :navbar/home "Inicio",
+   :info/chemo-7
+   "es la abreviatura para los regímenes de quimioterapia de tercera generación, que contienen taxanos como paclitaxel (Taxol) y docetaxel (Taxotere)",
+   :legal/priv "Privacidad",
+   :icons/chemo "debido a la quimioterapia",
+   :priv/table-1 "Nombre",
+   :about/tech-menu-7 "Quién creó Predict",
+   :navbar/wbp "– Quién desarrolló Predict",
+   :texts/out-of-3
+   "que recibieron otros 5 años de terapia hormonal",
+   :tool/reset-button "Reiniciar",
+   :legal/table3-8 "Trastuzumab (si HER2+)",
+   :about/hist-4-3
+   "Validamos la versión de Predict que incluye KI67 utilizando una base de datos de Nottingham de 1,274 mujeres diagnosticadas entre 1989-98 y seguidas durante 10 años. La adición de KI67 condujo a una pequeña mejora en la calibración y la discriminación en 1,274 pacientes con enfermedad ER positiva: el área bajo la curva ROC mejoró de 0,7611 a 0,7676 (p = 0,005). Estos datos fueron publicados en ",
+   :about/hist-1
+   "El modelo original (v1.0) se derivó del registro de información de cáncer de 5.694 mujeres tratadas en Anglia Orieltal, Reino Unido entre 1999 y 2003. Estas mujeres fueron seguidas hasta el 31 de diciembre de 2007, de modo que la mediana de la duración del seguimiento fue de 5.6 años y la máxima fue de 8 años. Los modelos de mortalidad por cáncer de mama para tumores ER positivos y ER negativos se construyeron utilizando riesgos proporcionales de Cox, ajustados por factores de pronóstico conocidos y modo de detección (sintomático versus estudios de detección). Las estimaciones de supervivencia para una paciente individual se basan en la comorbilidad promedio de las mujeres con cáncer de mama de una edad similar. Se proporciona más información sobre v1.0 en un documento publicado en ",
+   :icons/no-h10
+   " sin extensión de la terapia",
+   :about/prev
+   "Enlaces a versiones anteriores de la herramienta",
+   :text/die-anyway-2
+   " morirían por causas no relacionadas con el cáncer de mama.",
+   :button/ki67-status-unknown "Desconocido",
+   :table/year-pick-2-3
+   " años a partir de ahora).",
+   :legal/m-4 "Tamaño del tumor (mm)",
+   :chart/legend-chemo "quimioterapia ",
+   :faqs2-a1
+   "Predict hace estimaciones de lo que se espera que les suceda a las mujeres con características similares con base en datos del pasado. Los hallazgos se basan en mujeres que fueron tratadas en el este de Inglaterra, pero también probamos que la herramienta arrojara los mismos resultados en casi 5,500 mujeres tratadas en West Midlands y en una extensa base de datos de mujeres diagnosticadas menores de 40 años en Nottingham. Hasta donde sabemos, la herramienta Predict funciona igualmente bien para todas las mujeres en el Reino Unido. También pusimos a prueba a Predict en más de 3,000 mujeres tratadas en Columbia Británica, Canadá y en un grupo grade mujeres de los Países Bajos. Otros investigadores también han validado Predict en grupos de pacientes de los Países Bajos y Malasia. Cinco artículos científicos que describen el trabajo hecho con Predict han sido revisados por clínicos y científicos (ver Publicaciones para más detalles). En resumen, Predict hace estimaciones a partir de grandes poblaciones de mujeres estudiadas, pero de ninguna manera puede decir qué le pasará a mujer en particular.",
+   :footer/wtup-1 "¿Quieres usar Predict?",
+   :about/tech-0-3
+   "\nLa Cambridge Breast Unit (Reino Unido) utiliza el beneficio absoluto de supervivencia a 10 años de la quimioterapia para guiar la toma de decisiones para la quimioterapia adyuvante de la siguiente manera: <3% no se recomienda la quimioterapia; 3-5% la quimioterapia se discute como una posible opción; > 5% se recomienda la quimioterapia.",
+   :info/mmets-7
+   "[1] Iqbal J, Ginsburg O, Giannakeas V, et al. The impact of nodal micrometastasis on mortality among women with early-stage breast cancer. Breast Cancer Res Treat 2017;161(1):103-115.",
+   :home/qmark "?",
+   :button/grade-grade2 "2",
+   :table/year-pick-2-2 " (esto es, ",
+   :info/her2-2
+   "se refiere a si las células tumorales tienen o no un alto número de receptores HER2. Este receptor se conoce como un factor de crecimiento; cuando HER2 está presente en altas cantidades en las células puede provocar que se dividan demasiado y con ello aumente el crecimiento del tumor. Por eso algunos tratamientos se enfocan en bloquear este receptor. Alrededor de una cuarta parte de los tumores de cáncer de mama tienen una gran cantidad de receptores HER2 y se conocen como \"HER2 positivos\". Hay algunos medicamentos que están específicamente dirigidos a tumores positivos para HER2, como trastuzumab (Herceptin) y otros. ",
+   :navbar/contact "Contacto",
+   :info/horm-2 " o  ",
+   :faqs/head-2
+   "Información sobre tratamientos:",
+   :texts/out-of-6-1 "años",
+   :info/er-status2
+   " se refiere a si las células tumorales tienen o no receptores para la hormona estrógeno. Las células que tienen este tipo de receptores dependen del estrógeno para crecer, por lo que las terapias hormonales (como el tamoxifeno o los inhibidores de la aromatasa) pueden ser exitosas.",
+   :faqs3-a1
+   "Estas predicciones se basan en pacientes diagnosticadas entre 1999 y 2004 e incluyen seguimiento de hasta 15 años, esto es porque para realizar predicciones a largo plazo, se deben utilizar datos más antiguos. Posiblemente los resultados de estos tratamientos serían diferentes en las pacientes diagnosticadas hoy en día. El uso de datos más antiguos puede sobreestimar ligeramente el beneficio de los tratamientos.",
+   :faqs14-q
+   "¿Cómo se desarrolló el programa de computadora?",
+   :faqs11-q
+   "\n¿Predict toma en cuenta los diferentes tipos de cirugía?",
+   :info/mmets-5
+   "Esta sección sólo es relevante si ingresaste ‘1’ para el número de nódulos positivos.",
+   :button/er-status-yes "Positivo",
+   :legal/disc-10
+   "El modelo ha sido validado en múltiples cohortes independientes de cáncer de mama con más de 23,000 mujeres diagnosticadas con cáncer de mama en Inglaterra, los Países Bajos, Canadá y Malasia, y los resultados se han publicado en revistas académicas arbitradas. Se ha hecho todo lo posible para garantizar que se usen datos precisos, procedimientos estadísticos confiables y un algoritmo robusto.",
+   :info/size6
+   "Grado 2 (Moderadamente diferenciado)",
+   :tool/tr-options "Opciones de tratamiento",
+   :icons/deaths "muertes",
+   :faqs10-a1
+   "Los cálculos de Predict son sólo para mujeres que tienen cáncer de mama invasivo, no son para mujeres con CDis (carcinoma ductal in situ) o CLis (carcinoma lobulillar in situ).",
+   :button/bis-yes "Sí",
+   :table/plus-5-more
+   "+ 5 años más de terapia hormonal",
+   :about/hist-3-1
+   "El modelo se actualizó en octubre de 2011 para incluir la expresión de HER2. Las estimaciones del efecto pronóstico del nivel de expresión de HER2 se basaron en un análisis de 10,179 casos recopilados por el Breast Cancer Association Consortium (BCAC). Una validación del nuevo modelo en la base de datos original de British Columbia se publicó en el ",
+   :home/wipf-text2
+   "Se recomienda que las pacientes lo usen con asesoría de su médico.",
+   :horm/erplus-1-1
+   "Terapia hormonal (endocrina)",
+   :navbar/privacy
+   "Privacidad y protección de datos",
+   :treatment/tra "Trastuzumab",
+   :help/er-status "Expresión de ER",
+   :navbar/pv "– Versiones anteriores",
+   :info-title/detected "Forma de detección",
+   :faqs6-a1
+   "Se están investigando varios nuevos tipos de tratamiento para el cáncer de mama. Sin embargo, no podemos incluir estos nuevos tratamientos en Predict hasta contar con grandes ensayos clínicos que demuestren la magnitud de su beneficio en pacientes con cáncer de mama.",
+   :about/tech-0-2
+   "El modelo es fácil de usar: simplemente ingresa los datos de una paciente, incluida su edad, tamaño del tumor, grado del tumor, cantidad de ganglios positivos, expresión de receptores de estrógeno (ER), expresión de HER2, expresión de KI67 y el modo de detección. Las estimaciones de supervivencia, con y sin terapia adyuvante (quimioterapia, terapia hormonal, trastuzumab y bifosfonatos para pacientes posmenopáusicas) se presentan en formato visual y escrito. Los beneficios del tratamiento para la terapia hormonal y la quimioterapia se calculan aplicando las reducciones proporcionales estimadas en la tasa de mortalidad del Early Breast Cancer Trialists' Collaborative Group a la mortalidad específica del cáncer de mama. La reducción proporcional para la terapia hormonal se basa en 5 años de tamoxifeno. Las reducciones de mortalidad previstas están disponibles tanto para regímenes de quimioterapia de segunda generación (que contienen antraciclina, > 4 ciclos o equivalentes) como para regímenes de tercera generación (que contienen taxanos).",
+   :about/hist-4-2
+   "La positividad de KI67 para el modelo Predict se definió como la tinción positiva de más de 10 por ciento de las células tumorales.",
+   :info/h5-already-4 " ya has recibido ",
+   :legal/table3-3 "aprox",
+   :info/dcis2
+   "CDis (Carcinoma Ductal in situ)",
+   :button/ki67-status-yes "Positivo",
+   :navbar/dh "– Historia de su desarrollo",
+   :faqs8-a1
+   "Predict ha sido diseñado y probado usando solamente datos de mujeres y no debe usarse para hacer predicciones para hombres con cáncer de mama",
+   :horm-delayed
+   "por 5 años más - usando datos sólo de",
+   :help/mode "Forma de detección",
+   :about/ee-add-3
+   "Hemos asumido que el beneficio relativo de una terapia endocrina adicional de cinco años es el mismo en todos los subgrupos. Los investigadores del ensayo Atlas no informan sobre ningún análisis de subgrupos basado en las características del paciente o el tumor al momento del diagnóstico. Sin embargo, dada la ausencia de interacción para la terapia hormonal adyuvante de 5 años establecida por el  Early Breast Cancer Trialists' Collaborative Group, 2011 [6], esto parece una suposición razonable para la terapia hormonal prolongada.",
+   :faqs15-q "¿Quién diseñó el sitio web?",
+   :footer/support "Enlaces para apoyo",
+   :results/display-title-1-1 " muestra el",
+   :info-title/her2 "Expresión de HER2",
+   :faqs15-a2
+   " en la Universidad de Cambridge. La funcionalidad del sitio y el software de visualización están registrados por Winton Center como 4U2C. Sin embargo, nos complace que otros lo usen para fines similares. Ponte en contacto con nosotros para discutirlo en ",
+   :priv/table-15 "un año",
+   :info/h10-already-warning-3-3
+   " aTTom trial",
+   :about/pubs "Publicaciones",
+   :tool/when-I-add-2
+   "Predict calcula primero los beneficios de la terapia hormonal, luego los de la quimioterapia, luego del trastuzumab y luego de los bifosfonatos. Si elimina la opción de la terapia hormonal, verá que el beneficio de la quimioterapia aumentará ligeramente, ya que ahora es la primera terapia que el algoritmo está considerando y, por lo tanto, recibe el impulso de 'absorber' un poco más beneficio general.",
+   :help/show-uncertainty "¿Mostrar rangos?",
+   :about/over-0-1
+   "Es importante saber que esos tratamientos tienen efectos secundarios que deben considerarse al decidir entre ellos.",
+   :button/bis- "No",
+   :about/tech-menu-3 "Publicaciones",
+   :faqs4-a1
+   "Los tratamientos médicos no funcionan en todas las personas por igual, mientras que algunas personas pueden obtener grandes beneficios, otras pueden no obtener ninguno y sólo sufrir los efectos secundarios dañinos. Esto hace que la decisión de probar -o no- un tratamiento sea difícil y muy personal. En el caso del cáncer, los tratamientos pueden retrasar el regreso de un cáncer o incluso detenerlo por completo. Según estadísticas basadas en lo que anteriormente les sucedió a mujeres con cánceres similares cuando intentaron un tratamiento, Predict intenta dar la 'mejor suposición' sobre el tipo de beneficios que una opción de tratamiento podría darle a una paciente. Esto potencialmente ayuda a que las pacientes tomen su propia decisión respecto al tratamiento de manera informada. Sin embargo, los posibles beneficios siempre deben sopesarse contra los posibles daños de los efectos secundarios",
+   :about/over-1-1
+   "La herramienta está dirigida a las mujeres que se han sometido a cirugía para cáncer de mama invasivo temprano y están en proceso de decidir qué otros tratamientos recibir. No está diseñado para mujeres que han recibido tratamientos neoadyuvantes (quimioterapia administrada antes de la cirugía) o que ya han recibido tratamiento para el cáncer, para mujeres cuyo cáncer de seno se encuentra en ambos senos o que al momento del diagnóstico el cáncer ya se encuentra diseminado en partes distantes del cuerpo, o para mujeres con cáncer de mama no invasivo, como el carcinoma ductal in situ o el carcinoma lobular in situ. Tampoco está diseñado para hombres con cáncer de mama. ",
+   :info/nobody-2 "la descripción matemática ",
+   :footer/wtup-2
+   "\nEsta herramienta ayuda a comprender cómo los tratamientos para el cáncer de mama pueden mejorar las tasas de supervivencia después de la cirugía.",
+   :navbar/hpw "– Cómo funciona Predict",
+   :info/nodes-6 " será activada. ",
+   :info/size8
+   "Grado 3 (Pobremente diferenciado)",
+   :info/horm-6
+   "Los tratamientos generalmente tienen el potencial de causar tanto daños como beneficios. Es importante sopesar ambos para llegar a una decisión. Algunos pueden causar más daño que beneficio a algunas personas.",
+   :chart/subtitle-2
+   " años después de la cirugía",
+   :info-title/nodes "Nódulos positivos",
+   :about/hist-5-3
+   "Con el fin de considerar la edad en el momento del diagnóstico y suavizar la función de supervivencia para el tamaño del tumor y el estado de los ganglios, reajustamos el modelo de pronóstico de Predict utilizando la cohorte original de casos de Anglia Oriental con un seguimiento extendido hasta el 31 de diciembre de 2012 e incluyendo 3,787 mujeres con 10 años de seguimiento. El ajuste del modelo se probó en los tres conjuntos de datos independientes que también se habían utilizado para validar la versión original de Predict.",
+   :faq/health-talk
+   "Health Talk - videos de mujeres que comparten su experiencia con el cancer de mama y opciones de tratamientos",
+   :button/horm-h10 "10 Años",
+   :chart/add-bene-4 "años.",
+   :info/chemo-6 "3ra gen",
+   :info/size9
+   " - las células son muy diferentes de las sanas y, a menudo, de crecimiento rápido",
+   :tool/info-for-more-info
+   "botón de información. ",
+   :legal/m-2 "edad"}]]
