@@ -65,23 +65,3 @@ WARNING: resources/public/js/compiled/min/inferred_externs.js:33: WARNING - name
 goog.isArrayLike;
 ```
 then it's benign. (goog does not need to be declared extern)
-
-### Creating build number for release
-
-As seen on bottom right of predict webpage, version number to track is generated through git tag system.
-See https://git-scm.com/book/en/v2/Git-Basics-Tagging for detailed information
-
-##### Create tag
-Create annotated tag: `git tag -a v1.4b1.00 -m "GDPR Release"`
-Create lightweight tag: `git tag v1.4b1.01-lw`
-
-##### Format
-Format: v2.10b1.00
-
-v2.10 is Paul's versioning.
-b1.00 is our software versioning.
-
-##### Git describe
-
-`git describe` is used to generate our build number shown on webpage. Contains useful information such as how many
-commits current branch you are on from initial tag. 
